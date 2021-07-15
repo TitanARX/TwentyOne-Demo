@@ -1,0 +1,869 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2931469749213566294
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3de8a10d953942bdbf39caf185e0f4d, type: 3}
+  m_Name: RLProNoise
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  stretchResolution:
+    overrideState: 0
+    value: 480
+  n_NoiseLinesAmountY:
+    overrideState: 0
+    value: 480
+  f_Granularity:
+    overrideState: 1
+    value: 0
+  f_GranularityAmount:
+    overrideState: 0
+    value: 0.5
+  f_TapeNoise:
+    overrideState: 0
+    value: 0
+  n_NoiseSignalProcessing:
+    overrideState: 0
+    value: 1
+  f_TapeNoiseAmount:
+    overrideState: 0
+    value: 1
+  tapeLinesAmount:
+    overrideState: 0
+    value: 0.8
+  f_TapeNoiseTH:
+    overrideState: 0
+    value: 1
+  f_TapeNoiseSpeed:
+    overrideState: 0
+    value: 0.5
+  f_LineNoise:
+    overrideState: 1
+    value: 1
+  f_LineNoiseAmount:
+    overrideState: 1
+    value: 1.63
+  f_LineNoiseSpeed:
+    overrideState: 0
+    value: 1
+  f_SignalNoise:
+    overrideState: 1
+    value: 0
+  f_SignalNoisePower:
+    overrideState: 0
+    value: 0.9
+  f_SignalNoiseAmount:
+    overrideState: 0
+    value: 1
+  mask:
+    overrideState: 0
+    value: 0
+  maskTexture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  unscaledTime:
+    overrideState: 0
+    value: 0
+--- !u!114 &-1351481236033436538
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2585c6ab0fec349748f8f04c4db5ba0a, type: 3}
+  m_Name: RLProArtefacts
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  cutOff:
+    overrideState: 0
+    value: 0.5
+  amount:
+    overrideState: 1
+    value: 1
+  fade:
+    overrideState: 1
+    value: 0.56
+  color:
+    overrideState: 1
+    value: {r: 0.20705767, g: 0.9339623, b: 0.20990823, a: 0}
+  debugArtefacts:
+    overrideState: 0
+    value: 0
+--- !u!114 &-929746991393189147
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a79b01ea5641d4aa6daa2e23605641, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 1.89
+  threshold:
+    overrideState: 1
+    value: 0.29
+  softKnee:
+    overrideState: 0
+    value: 0.5
+  clamp:
+    overrideState: 1
+    value: 65693.05
+  diffusion:
+    overrideState: 0
+    value: 7
+  anamorphicRatio:
+    overrideState: 0
+    value: 0
+  color:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  fastMode:
+    overrideState: 1
+    value: 0
+  dirtTexture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+  dirtIntensity:
+    overrideState: 0
+    value: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
+  m_Name: Retro
+  m_EditorClassIdentifier: 
+  settings:
+  - {fileID: 441037168110215584}
+  - {fileID: 3199961876004388624}
+  - {fileID: 7210408685666576688}
+  - {fileID: 4020072725548835046}
+  - {fileID: 4934669743952564459}
+  - {fileID: -929746991393189147}
+  - {fileID: -1351481236033436538}
+  - {fileID: -2931469749213566294}
+  - {fileID: 1416110744486257168}
+--- !u!114 &441037168110215584
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d7a1cf4cc9a64c299a7b35f7444f4d9, type: 3}
+  m_Name: RLProVHSScanlines
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  scanLinesColor:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 0}
+  scanLines:
+    overrideState: 1
+    value: 0.5
+  speed:
+    overrideState: 1
+    value: 0
+  fade:
+    overrideState: 1
+    value: 0.504
+  horizontal:
+    overrideState: 0
+    value: 1
+  distortion:
+    overrideState: 1
+    value: 3491
+  distortion1:
+    overrideState: 0
+    value: 0
+  distortion2:
+    overrideState: 0
+    value: 0
+  scale:
+    overrideState: 0
+    value: 0
+--- !u!114 &1416110744486257168
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4c6e29127a742be83c53c4a52bda22, type: 3}
+  m_Name: RLProGlitch1
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  amount:
+    overrideState: 1
+    value: 2
+  stretch:
+    overrideState: 1
+    value: 0.17
+  speed:
+    overrideState: 0
+    value: 0.5
+  fade:
+    overrideState: 0
+    value: 0.5
+  rMultiplier:
+    overrideState: 0
+    value: 1
+  gMultiplier:
+    overrideState: 0
+    value: 1
+  bMultiplier:
+    overrideState: 0
+    value: 1
+  x:
+    overrideState: 0
+    value: 127.1
+  y:
+    overrideState: 0
+    value: 10002
+  angleY:
+    overrideState: 0
+    value: 200
+  mask:
+    overrideState: 0
+    value: 0
+  maskTexture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+--- !u!114 &3199961876004388624
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6e7d18b1240f2c4d8356b4bd515ef30, type: 3}
+  m_Name: RLProAnalogTVNoise
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  staticNoise:
+    overrideState: 1
+    value: 1
+  Horizontal:
+    overrideState: 0
+    value: 1
+  Fade:
+    overrideState: 1
+    value: 0.007
+  barHeight:
+    overrideState: 1
+    value: 8.6
+  tile:
+    overrideState: 0
+    value: {x: 1, y: 1}
+  textureAngle:
+    overrideState: 0
+    value: 1
+  edgeCutOff:
+    overrideState: 0
+    value: 0
+  CutOff:
+    overrideState: 0
+    value: 1
+  barSpeed:
+    overrideState: 1
+    value: 2.1
+  texture:
+    overrideState: 0
+    value: {fileID: 0}
+    defaultState: 1
+--- !u!114 &4020072725548835046
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 828e6f24511354402baf7982291c191b, type: 3}
+  m_Name: RLProFisheye
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 0
+  fisheyeType:
+    overrideState: 1
+    value: 0
+  bend:
+    overrideState: 1
+    value: 1
+  cutOffX:
+    overrideState: 0
+    value: 0.5
+  cutOffY:
+    overrideState: 0
+    value: 0.5
+  fadeX:
+    overrideState: 0
+    value: 1
+  fadeY:
+    overrideState: 0
+    value: 1
+  size:
+    overrideState: 1
+    value: 2.9
+--- !u!114 &4934669743952564459
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fde8b1c33e8479cb0f215645ee130a, type: 3}
+  m_Name: RLProBleed
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 0
+  bleedMode:
+    overrideState: 1
+    value: 0
+  bleedModeIndex: 0
+  bleedAmount:
+    overrideState: 1
+    value: 0.43
+  bleedLength:
+    overrideState: 0
+    value: 0
+  bleedDebug:
+    overrideState: 0
+    value: 0
+  editCurves:
+    overrideState: 0
+    value: 0
+  syncYQ:
+    overrideState: 0
+    value: 0
+  curveY:
+    overrideState: 0
+    value:
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Loop: 1
+      m_ZeroValue: 0.5
+      m_Range: 1
+      cachedData:
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+  curveI:
+    overrideState: 0
+    value:
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Loop: 1
+      m_ZeroValue: 0.5
+      m_Range: 1
+      cachedData:
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+  curveQ:
+    overrideState: 0
+    value:
+      curve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_Loop: 1
+      m_ZeroValue: 0.5
+      m_Range: 1
+      cachedData:
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+      - 0.5
+--- !u!114 &7210408685666576688
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137742241a85042e589ba3178d08c2f4, type: 3}
+  m_Name: RLProJitter
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 0
+  twitchHorizontal:
+    overrideState: 1
+    value: 0
+  horizontalFreq:
+    overrideState: 0
+    value: 1
+  twitchVertical:
+    overrideState: 0
+    value: 0
+  verticalFreq:
+    overrideState: 0
+    value: 1
+  twitchVerticalInterval:
+    overrideState: 0
+    value: 1
+  stretch:
+    overrideState: 0
+    value: 0
+  stretchResolution:
+    overrideState: 0
+    value: 1
+  jitterHorizontal:
+    overrideState: 0
+    value: 0
+  jitterHorizontalAmount:
+    overrideState: 0
+    value: 1
+  jitterVertical:
+    overrideState: 0
+    value: 0
+  jitterVerticalAmount:
+    overrideState: 0
+    value: 1
+  jitterVerticalSpeed:
+    overrideState: 0
+    value: 1
+  unscaledTime:
+    overrideState: 0
+    value: 0

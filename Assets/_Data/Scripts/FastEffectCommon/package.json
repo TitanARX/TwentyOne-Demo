@@ -1,0 +1,13 @@
+{
+  "name": "com.fasteffect.common",
+  "version": "1.0.0",
+  "displayName": "Fast Effect Common Assets",
+  "description": "Basic Scripts and assets used by Fast Effect across projects",
+  "unity": "2019.4",
+  "author": {
+    "name": "Fast Effect",
+    "email": "sales@fasteffect.com",
+    "url": "https://www.fasteffect.com"
+  },
+  "type": "template"
+}

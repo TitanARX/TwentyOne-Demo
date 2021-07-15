@@ -1,0 +1,17 @@
+{
+    "name": "FastEffect.Common.Editor",
+    "references": [
+        "GUID:624b6ca067bc142458b2487b772ea7d1"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

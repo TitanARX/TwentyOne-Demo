@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e12fc6772010049a11f57f9bc5c614, type: 3}
+  m_Name: InputSFX
+  m_EditorClassIdentifier: 
+  AudioClips:
+  - {fileID: 8300000, guid: c035379ca5540d84ca008d91bda5e3d1, type: 3}
+  - {fileID: 8300000, guid: 5c4178175b7ec944aa7fcc9355f20ff2, type: 3}
+  - {fileID: 8300000, guid: e2e35e2e9e4f6354eb2110f9ec10284a, type: 3}
+  mixerGroup: {fileID: -2555576690205488801, guid: d7d2acc140f813241a3788697b2c5398,
+    type: 2}
