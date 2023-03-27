@@ -390,7 +390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &136140682
 RectTransform:
   m_ObjectHideFlags: 0
@@ -408,7 +408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -214.4}
+  m_AnchoredPosition: {x: 0, y: -214.40002}
   m_SizeDelta: {x: 640, y: 175.9873}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &136140683
@@ -683,7 +683,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -136}
+  m_AnchoredPosition: {x: 0, y: -244.08997}
   m_SizeDelta: {x: 640, y: 63.799988}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &239350553
@@ -706,7 +706,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: instructions
+  m_text: "Antagonist\nentity animation \nplays\ndepending on\nfirst play or progress\n\n[animated
+    background grid perspective not flat]"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ba17247ba48fc224caff3bfb76e366a2, type: 2}
   m_sharedMaterial: {fileID: 711230246681937852, guid: ba17247ba48fc224caff3bfb76e366a2,
@@ -995,6 +996,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fade Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5570648350220680852, guid: 3db3d8f82ab2a7743a24ae1dee784a26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5570648350220680855, guid: 3db3d8f82ab2a7743a24ae1dee784a26,
         type: 3}
       propertyPath: m_Enabled
@@ -1106,13 +1112,14 @@ GameObject:
   - component: {fileID: 958443549}
   - component: {fileID: 958443553}
   - component: {fileID: 958443552}
+  - component: {fileID: 958443554}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &958443548
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1265,6 +1272,119 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &958443554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958443547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 4a67fb7eff8fa944a8cbc86f8bb76f36, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 573249608}
+          m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+          m_MethodName: LoadLevel
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &959348131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 959348134}
+  - component: {fileID: 959348133}
+  - component: {fileID: 959348132}
+  m_Layer: 0
+  m_Name: Loading Screen Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &959348132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959348131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 4a67fb7eff8fa944a8cbc86f8bb76f36, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 573249608}
+          m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+          m_MethodName: LoadLevel
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!320 &959348133
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959348131}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 253c685cacc79d84d96d3c634a244de3, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 0
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 4879035760756094021, guid: 253c685cacc79d84d96d3c634a244de3, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7884653700521181096, guid: 253c685cacc79d84d96d3c634a244de3, type: 2}
+    value: {fileID: 959348132}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &959348134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959348131}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1911.2126, y: 1060.8446, z: -195.54904}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1336763935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,7 +1637,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 05541bf2fb369634cb1ab38126f5ea79, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd8cb3e713b682f4a97df44d0e6d140d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

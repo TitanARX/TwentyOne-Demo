@@ -75,11 +75,13 @@ public class MatrixGrid : MonoBehaviour
             return null;
     }
 
+    //round out position
     public static Vector2 RoundVector(Vector2 v)
     {
         return new Vector2(Mathf.Round(v.x), Mathf.Round(v.y));
     }
 
+    //is object within grid
     public static bool IsInsideBorder(Vector2 pos)
     {
         return (int)pos.x >= 0 && (int)pos.x < widthColumns && (int)pos.y >= 0;
@@ -91,12 +93,13 @@ public class MatrixGrid : MonoBehaviour
         {
             int x=(int) objData.x;
             int y=(int) objData.y;
+
            if( grid[x,y]!=null)
            {
-            OnDestroyCube(objData);
-            Destroy(grid[x,y].parent.gameObject);
-            grid[x,y]=null;
-             DecreaseRowsAbove(x,y+1);            
+                OnDestroyCube(objData);
+                Destroy(grid[x,y].parent.gameObject);
+                grid[x,y]=null;
+                DecreaseRowsAbove(x,y+1);            
            } 
         }
     }
@@ -130,6 +133,7 @@ public class MatrixGrid : MonoBehaviour
                 Destroy(grid[x, y].parent.gameObject);
 
                 grid[x, y] = null;
+
                 DecreaseRowsAbove(x,y+1);
                 
             }

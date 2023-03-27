@@ -24,6 +24,8 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator AsyncLoad(int i)
     {
+        yield return new WaitForSeconds(1.5f);
+
         PreLoadingEvents[0].Invoke();
 
         yield return new WaitForSeconds(1f);
