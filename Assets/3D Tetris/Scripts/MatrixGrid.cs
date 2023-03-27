@@ -140,21 +140,6 @@ public class MatrixGrid : MonoBehaviour
         }
     }
 
-  
- /*   public static void DecreaseRow(int y)
-    {
-        for (int x = 0; x < widthColumns; ++x)
-        {
-            if (grid[x, y] != null)
-            {
-                grid[x, y - 1] = grid[x, y];
-                grid[x, y] = null;
-
-                grid[x, y - 1].position += new Vector3(0, -1, 0);
-            }
-        }
-    }
-*/
     public static void DecreaseRowsAbove(int x,int y)
     {
         for (int i = y; i < heightRows; i++)
