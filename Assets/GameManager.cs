@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateLinesToClear ()
     {
-        Debug.Log("Checking Lines");
+      
 
         if(_linesVar.Value != GetLevelAttribute[GetCurrentLevel.Value].linesToClear)
         {

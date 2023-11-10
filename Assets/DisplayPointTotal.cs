@@ -35,7 +35,7 @@ public class DisplayPointTotal : MonoBehaviour
             }
         }
 
-        Debug.Log("Chaning Texture to: "  + BlockObjectPointValue);
+        //Debug.Log("Chaning Texture to: "  + BlockObjectPointValue);
     }
 
 }

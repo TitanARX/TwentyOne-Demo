@@ -2,9 +2,26 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
+using System;
+
+public class BlockSettleArgs : EventArgs 
+{
+    public int Value;
+    public Vector2 Pos;
+
+    public BlockSettleArgs(int value, Vector2 pos)
+    {
+        this.Value = value;
+        this.Pos = pos;
+    }
+}
+
+public enum BlockState { Dropping, Settled }
 
 public class BlockObject : MonoBehaviour
 {
+    public BlockState state = BlockState.Dropping;
+
     [Tooltip("The percentage chance that a destroyer wildcard will spawn"), Range(0, 100)]
     public int DestroyerWildcardChance = 10;
     [Space]
@@ -16,7 +33,7 @@ public class BlockObject : MonoBehaviour
 
     private float lastFall = 0f;
 
-    private bool isNewBlockSpawn=false;
+    private bool nextSpawnedBlock=false;
 
     [Header("DELETE THIS")]
     public bool isDestroyerWildcard;
@@ -30,8 +47,15 @@ public class BlockObject : MonoBehaviour
     public FloatVariable FallSpeed;
     public IntVariable WildcardChance;
 
-    private void Start()
+    public Solver solver => GameObject.FindObjectOfType<Solver>();
+
+    public EventHandler<BlockSettleArgs> OnSettle = (sender, e) => { };
+
+
+    private void OnEnable()
     {
+        state = BlockState.Dropping;
+
         int willDestroyerSpawn = UnityEngine.Random.Range(0, 100);
 
         DestroyerWildcardChance = WildcardChance.Value;
@@ -39,12 +63,12 @@ public class BlockObject : MonoBehaviour
         if (willDestroyerSpawn > DestroyerWildcardChance)
         {
              MatrixGrid.isWildCard=false;
-            Point = Random.Range((int)RanGenRange.x, (int)RanGenRange.y);
+                Point = UnityEngine.Random.Range((int)RanGenRange.x, (int)RanGenRange.y);
         }
         else
         {
             MatrixGrid.isWildCard=true;
-            Point =Random.Range(10,13);           //  < 10  - for single colum>    < 11 -  for single row >   < 12  -   for row and column >
+                Point = UnityEngine.Random.Range(10,13);           //  < 10  - for single colum>    < 11 -  for single row >   < 12  -   for row and column >
         }
         
     }
@@ -73,8 +97,9 @@ public class BlockObject : MonoBehaviour
 
         transform.position += new Vector3(-1, 0, 0);
 
-        if (IsValidGridPosition())
-            UpdateMatrixGrid();
+        if (GridPositionAvailable())
+
+            UpdateAvailableGridPositions();
         else
             transform.position += new Vector3(1, 0, 0);
     }
@@ -85,49 +110,102 @@ public class BlockObject : MonoBehaviour
 
         transform.position += new Vector3(1, 0, 0);
 
-        if (IsValidGridPosition())
-            UpdateMatrixGrid();
+        if (GridPositionAvailable())
+
+            UpdateAvailableGridPositions();
         else
             transform.position += new Vector3(-1, 0, 0);
     }
 
+    public int solves = 0;
+
     public void MoveBlockDown()
     {
+        //External Events
         D_MovementEvent.Invoke();
 
+        //Move Block Down
         transform.position += new Vector3(0, -1, 0);
 
-        if (IsValidGridPosition())
-            UpdateMatrixGrid();
-        else
+        //Check if blocks Current Position is Empty
+        if (GridPositionAvailable())
         {
+            //Update Grid Matrix as Block Moves
+            UpdateAvailableGridPositions();
+        }
+        else
+        {            
+            //Bump Cube Up 1 Space
             transform.position += new Vector3(0, 1, 0);
-            
-            bool isReachTerget =  MatrixGrid.checkALLDirectionTargetReach((int)transform.position.x,(int)transform.position.y);
 
-            UpdateMatrixGrid();
-          
-         if(isReachTerget&&!isNewBlockSpawn)
+            //Gather Last point Before Destroying Block
+            //solver.ReferencePosition = transform.position;
+
+            //Check if the target value (21) has been met
+
+            //Debug.Log("Checking > Vertical > Horizontal > Right Diagonal > Left Diagonal Values");
+
+            //bool targetValueReached = MatrixGrid.CheckAllDirectionTargetReach((int)transform.position.x, (int)transform.position.y);
+
+            //Update Grid Positions after Block Settles
+
+            UpdateAvailableGridPositions();
+
+            nextSpawnedBlock = true;
+
+            OnSettle?.Invoke(this, new BlockSettleArgs(Point, transform.position));
+
+            enabled = false;
+
+            #region Deprecate Soon
+
+
+            /*
+            if (targetValueReached && !nextSpawnedBlock)
             {
-                isNewBlockSpawn=true;
-                 FindObjectOfType<BlockSpawner>().callInstantiateCouritine((int)transform.position.y);
+                solver.SumGridRows();
+
+                if (!solver.DoubleCheck())
+                {
+                    Debug.Log("No Chaining Detected");
+
+                    //FindObjectOfType<BlockSpawner>().CallInstantiateCouritine((int)transform.position.y);
+                }
+                else
+                {
+                    Debug.Log("Chaining Detected");
+                }
+
+                nextSpawnedBlock = true;
+                //Wait for 2 seconds after match then spawn new cube
+
+                //Disable Block
                 enabled = false;
+
             }
-            else if(!isNewBlockSpawn)
+            else if (!nextSpawnedBlock)
             {
-                isNewBlockSpawn=true;
+                Debug.Log(solver.SumGridRows());
+
+                nextSpawnedBlock = true;
+
+                //Spawn Block - Value not met
                 FindObjectOfType<BlockSpawner>().SpawnBlock((int)transform.position.y);
+
+                //Disable Block
                 enabled = false;
             }
-         
-           
+            */
+
+            #endregion
+
         }
 
         lastFall = Time.time;
     }
     #endregion
 
-    private bool IsValidGridPosition()
+    private bool GridPositionAvailable()
     {
         foreach (Transform child in transform)
         {
@@ -139,11 +217,13 @@ public class BlockObject : MonoBehaviour
             if (MatrixGrid.grid[(int)v.x, (int)v.y] != null && MatrixGrid.grid[(int)v.x, (int)v.y].parent != transform)
                 return false;
         }
+
         return true;
     }
 
-    private void UpdateMatrixGrid()
+    public void UpdateAvailableGridPositions()
     {
+
         for (int y = 0; y < MatrixGrid.heightRows; ++y)
         {
             for (int x = 0; x < MatrixGrid.widthColumns; ++x)
@@ -151,15 +231,18 @@ public class BlockObject : MonoBehaviour
                 if (MatrixGrid.grid[x, y] != null)
                 {
                     if (MatrixGrid.grid[x, y].parent == transform)
+                    {
                         MatrixGrid.grid[x, y] = null;
+                    }
                 }
             }
         }
 
         foreach (Transform child in transform)
         {
-            Vector2 v = MatrixGrid.RoundVector(child.position);
-            MatrixGrid.grid[(int)v.x, (int)v.y] = child;
+            Vector2 roundedPosition = MatrixGrid.RoundVector(child.position);
+            
+            MatrixGrid.grid[(int)roundedPosition.x, (int)roundedPosition.y] = child;
         }
     }
 
