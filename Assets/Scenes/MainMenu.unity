@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 94728741}
   - component: {fileID: 94728744}
   m_Layer: 20
-  m_Name: Button
+  m_Name: Start Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -350,7 +350,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 180}
-  m_SizeDelta: {x: 340, y: 40}
+  m_SizeDelta: {x: 515.18, y: 40}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &94728741
 MonoBehaviour:
@@ -395,44 +395,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 94728742}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1968170673}
-        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: LoadLevel
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 94728744}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: PlayOneShot
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 9198c1d51b7aefd46a0e8e8a2ef12882,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 900148110}
-        m_TargetAssemblyTypeName: AudioManagerBase, Assembly-CSharp
-        m_MethodName: FadeAudio
-        m_Mode: 4
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &94728742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -952,6 +915,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136140681}
   m_CullTransparentMesh: 0
+--- !u!1 &217584288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217584290}
+  - component: {fileID: 217584289}
+  m_Layer: 0
+  m_Name: 'Signal '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &217584289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217584288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: de6edc6b0c3ce324bad6299c7480fe39, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1968170674}
+          m_TargetAssemblyTypeName: KeyInputListener, Assembly-CSharp
+          m_MethodName: Init
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!4 &217584290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217584288}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.162773, y: 0.1013413, z: -5.827144}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &299373741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,7 +1544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: PRESS START
+  m_text: Press to Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6b0618c9da6627644ae0f172a02d19e4, type: 2}
   m_sharedMaterial: {fileID: 3099377601617365124, guid: 6b0618c9da6627644ae0f172a02d19e4,
@@ -1634,7 +1658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &900148110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1944,6 +1968,8 @@ PlayableDirector:
     value: {fileID: 35399462}
   - key: {fileID: -8866606304083681425, guid: ceefb25c18c7037458c9dc74dc34669d, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 166533078433135361, guid: ceefb25c18c7037458c9dc74dc34669d, type: 2}
+    value: {fileID: 217584289}
   m_ExposedReferences:
     m_References:
     - ccd337a34fddd244f885970ec9ef6de2: {fileID: 900148109}
@@ -2350,6 +2376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1968170672}
   - component: {fileID: 1968170673}
+  - component: {fileID: 1968170674}
   m_Layer: 0
   m_Name: '[ SceneLoader ]'
   m_TagString: Untagged
@@ -2424,6 +2451,59 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   PostLoadingEvents: []
+--- !u!114 &1968170674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968170671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a1ca7ba823ec24d9a6d5fa6832cdd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  OnInputDeteccted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1968170673}
+        m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
+        m_MethodName: LoadLevel
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 94728744}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 9198c1d51b7aefd46a0e8e8a2ef12882,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 900148110}
+        m_TargetAssemblyTypeName: AudioManagerBase, Assembly-CSharp
+        m_MethodName: FadeAudio
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2050420329
 GameObject:
   m_ObjectHideFlags: 0

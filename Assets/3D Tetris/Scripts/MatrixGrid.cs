@@ -2,9 +2,25 @@
 using UnityEngine.Events;
 using System.Collections.Generic;
 using System.Collections;
+using System;
+
+[System.Serializable]
+public class GridSize
+{
+    public int rows = 11;
+    public int columns = 6;
+}
 
 public class MatrixGrid : MonoBehaviour
 {
+    [SerializeField]
+    [Header("Gameplay Board Size")]
+    [Tooltip("Determines the Size of the Object")]
+    private GridSize _gridSize;
+
+    public GridSize GridSizeReference { get => _gridSize; set => _gridSize = value; }
+
+
     public static bool isWildCard;
     public static Transform[,] grid;
 
@@ -28,6 +44,8 @@ public class MatrixGrid : MonoBehaviour
     public GameObject explosionPrefab;
 
     private static GameObject explosion;
+
+
     private static List<Vector2> horizontalBlockObjects;
 
     private static List<Vector2> rightDiagonalBlockObjects;
@@ -38,6 +56,7 @@ public class MatrixGrid : MonoBehaviour
     public static CustomAudioManager customAudio;
 
     public static Scoremanager scoremanager;
+
 
     private void Awake()
     {  
@@ -97,9 +116,15 @@ public class MatrixGrid : MonoBehaviour
            if( grid[x,y]!=null)
            {
                 OnDestroyCube(objData);
+
+                //Destroy Cube upon match score
                 Destroy(grid[x,y].parent.gameObject);
+                
+                //clear positions of destroyed cube
                 grid[x,y]=null;
-                DecreaseRowsAbove(x,y+1);            
+
+                //Decrease Rows after
+                DecreaseRowsAbove(x, y + 1);           
            } 
         }
     }
@@ -121,13 +146,12 @@ public class MatrixGrid : MonoBehaviour
         }
     }
 
-    public static void DeleteROw(int y)
+    public static void DeleteRow(int y)
     {
         for (int x = 0; x < widthColumns; ++x)
         {
             if (grid[x, y] != null)
             {
-
                 OnDestroyCube(grid[x, y].parent.gameObject.transform.position);
 
                 Destroy(grid[x, y].parent.gameObject);
@@ -147,32 +171,37 @@ public class MatrixGrid : MonoBehaviour
             if(grid[x,i]!=null)
             {
                 grid[x, i - 1] = grid[x, i];
+
                 grid[x, i] = null;
 
                 grid[x, i - 1].position += new Vector3(0, -1, 0);
 
-                checkALLDirectionTargetReach(x,i-1);
-            }
-           
+                CheckAllDirectionTargetReach(x,i-1);
+            }         
         }
     }
 
     public enum Direction { Horizontal, Vertical }
 
+
     public static bool IsPointValueReachedVertical(int index)
     {
+        //Total Value in each Column
         int CurrentTotal = 0;
 
             for (int y = 0; y < heightRows; ++y)
             {
                 if (grid[index, y] != null)
+                {
                     CurrentTotal += grid[index, y].parent.GetComponent<BlockObject>().Point;
+                }
             }
 
-            Debug.Log(" IsPointValueReachedVertical: Cur: "+CurrentTotal+" req:"+(PTotal-CurrentTotal));
+            //Debug.Log(" IsPointValueReachedVertical: Cur: "+ CurrentTotal+" req:"+ ( PTotal-CurrentTotal));
 
         if (CurrentTotal == PTotal)
         {
+            //Destroy Objects Audio Call
             DestroyBlockAudio("2,1,false");
 
             return true;
@@ -189,7 +218,6 @@ public class MatrixGrid : MonoBehaviour
         horizontalBlockObjects= new List<Vector2>();
         horizontalBlockObjects.Clear();
 
-    
             for (int x = indexX; x < widthColumns; ++x)
             {
                 if (grid[x, indexY] == null)
@@ -213,10 +241,11 @@ public class MatrixGrid : MonoBehaviour
                     horizontalBlockObjects.Add(temp);
             }
         
-         Debug.Log(" IsPointValueReachedHorizontal: Cur: "+CurrentTotal+" req:"+(PTotal-CurrentTotal));
+         //Debug.Log(" IsPointValueReachedHorizontal: Cur: "+CurrentTotal+" req:"+(PTotal-CurrentTotal));
 
         if (CurrentTotal == PTotal)
         {
+            //Audio Call
             DestroyBlockAudio("2,1,false");
 
             return true;
@@ -227,14 +256,19 @@ public class MatrixGrid : MonoBehaviour
         }
     }
 
+
+
     public static bool IsPointValueReachedRightDiagonal(int indexX,int indexY)
     {
         
         int CurrentTotal = 0;
         int storeIndexY=indexY;
+
         rightDiagonalBlockObjects= new List<Vector2>();
+        
         rightDiagonalBlockObjects.Clear();
-            for (int x = indexX; x < widthColumns; ++x)
+            
+        for (int x = indexX; x < widthColumns; ++x)
             {
                 if(indexY<0||indexY>=heightRows)
                     break;
@@ -263,7 +297,7 @@ public class MatrixGrid : MonoBehaviour
                     rightDiagonalBlockObjects.Add(temp);
                     indexY++;
             }
-             Debug.Log(" IsPointValueReachedRightDiagonal: Cur: "+CurrentTotal+" req:"+(PTotal-CurrentTotal));
+             //Debug.Log(" IsPointValueReachedRightDiagonal: Cur: "+CurrentTotal+" req:"+(PTotal-CurrentTotal));
 
 
         if (CurrentTotal == PTotal)
@@ -317,7 +351,7 @@ public class MatrixGrid : MonoBehaviour
                     leftDiagonalBlockObjects.Add(temp);
                     indexY--;
             }
-             Debug.Log(" IsPointValueReachedLeftDiagonal: Cur: "+CurrentTotal+" req:"+(PTotal-CurrentTotal));
+             //Debug.Log(" IsPointValueReachedLeftDiagonal: Cur: "+CurrentTotal+" req:"+(PTotal-CurrentTotal));
 
 
         if (CurrentTotal == PTotal)
@@ -332,63 +366,149 @@ public class MatrixGrid : MonoBehaviour
         }
     }
 
-    public static bool checkALLDirectionTargetReach(int indexX,int indexY)
+    public static bool CheckAllDirectionTargetReach(int indexX, int indexY)
     {
         //whatever the point value is of the current block
-        int temp=grid[indexX,indexY].parent.GetComponent<BlockObject>().Point;
+        int currentBlocksPointValue = grid[indexX, indexY].parent.GetComponent<BlockObject>().Point;
 
-        //if the current block is NOT a bomb/wilcard
-        if(temp<10)
+        bool isBonusCube = currentBlocksPointValue > 10;
+
+        //if the current block is NOT a bonus cube
+        if (isBonusCube == false)
         {
             bool verticalCheck = IsPointValueReachedVertical(indexX);
 
-            bool horizontalCheck = IsPointValueReachedHorizontal(indexX,indexY);
+            bool horizontalCheck = IsPointValueReachedHorizontal(indexX, indexY);
 
-            bool rightDiagonalCheck = IsPointValueReachedRightDiagonal(indexX,indexY);
+            bool rightDiagonalCheck = IsPointValueReachedRightDiagonal(indexX, indexY);
 
-            bool leftDiagonalCheck = IsPointValueReachedLeftDiagonal(indexX,indexY);
+            bool leftDiagonalCheck = IsPointValueReachedLeftDiagonal(indexX, indexY);
 
             if (verticalCheck)
             {
-                DeleteWholeColumns(indexX);
+                //DeleteWholeColumns(indexX);
             }
 
-            if(horizontalCheck)
+            if (horizontalCheck)
             {
-                DeleteSelectedObject(horizontalBlockObjects);
+                //DeleteSelectedObject(horizontalBlockObjects);
             }
 
-            if(rightDiagonalCheck)
+            if (rightDiagonalCheck)
             {
-                DeleteSelectedObject(rightDiagonalBlockObjects);
+                //DeleteSelectedObject(rightDiagonalBlockObjects);
             }
 
-            if(leftDiagonalCheck)
+            if (leftDiagonalCheck)
             {
-                DeleteSelectedObject(leftDiagonalBlockObjects);
+                //DeleteSelectedObject(leftDiagonalBlockObjects);
             }
 
-            return verticalCheck||horizontalCheck||rightDiagonalCheck||leftDiagonalCheck;
+            return verticalCheck || horizontalCheck || rightDiagonalCheck || leftDiagonalCheck;
 
         }
-        else if(temp==10)
+        else if (currentBlocksPointValue == 10)
         {
-            DeleteWholeColumns(indexX);
+            //Delete Vertical
+            //DeleteWholeColumns(indexX);
+
             return true;
         }
-        else if(temp==11)
+        else if (currentBlocksPointValue == 11)
         {
-            DeleteWholeRow(indexY);
+            //Delete Horizontal
+            //DeleteWholeRow(indexY);
+
             return true;
         }
-        else if(temp==12)
+        else if (currentBlocksPointValue == 12)
         {
-            DeleteWholeRow(indexY);
-            DeleteWholeColumns(indexX);
+            //Delete Diagonals
+            //DeleteWholeRow(indexY);
+            //DeleteWholeColumns(indexX);
+
             return true;
         }
+
         return false;
     }
+
+    #region Deprecate Soon
+
+    /*
+    public static bool CheckAllDirectionTargetReach(int indexX, int indexY)
+    {
+        if (grid[indexX, indexY] != null)
+        {
+            //whatever the point value is of the current block
+            int currentBlocksPointValue = grid[indexX, indexY].parent.GetComponent<BlockObject>().Point;
+
+            bool isBonusCube = currentBlocksPointValue > 10;
+
+            //if the current block is NOT a bonus cube
+            if (isBonusCube == false)
+            {
+                bool verticalCheck = IsPointValueReachedVertical(indexX);
+
+                bool horizontalCheck = IsPointValueReachedHorizontal(indexX, indexY);
+
+                bool rightDiagonalCheck = IsPointValueReachedRightDiagonal(indexX, indexY);
+
+                bool leftDiagonalCheck = IsPointValueReachedLeftDiagonal(indexX, indexY);
+
+                if (verticalCheck)
+                {
+                    //DeleteWholeColumns(indexX);
+                }
+
+                if (horizontalCheck)
+                {
+                    //DeleteSelectedObject(horizontalBlockObjects);
+                }
+
+                if (rightDiagonalCheck)
+                {
+                    //DeleteSelectedObject(rightDiagonalBlockObjects);
+                }
+
+                if (leftDiagonalCheck)
+                {
+                    //DeleteSelectedObject(leftDiagonalBlockObjects);
+                }
+
+                return verticalCheck || horizontalCheck || rightDiagonalCheck || leftDiagonalCheck;
+
+            }
+            else if (currentBlocksPointValue == 10)
+            {
+                //Delete Vertical
+                //DeleteWholeColumns(indexX);
+
+                return true;
+            }
+            else if (currentBlocksPointValue == 11)
+            {
+                //Delete Horizontal
+                //DeleteWholeRow(indexY);
+
+                return true;
+            }
+            else if (currentBlocksPointValue == 12)
+            {
+                //Delete Diagonals
+                //DeleteWholeRow(indexY);
+                //DeleteWholeColumns(indexX);
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+    */
+
+    #endregion
+
 
     public static void DeleteSelectedObject(List<Vector2> objects)
     {     
@@ -399,11 +519,11 @@ public class MatrixGrid : MonoBehaviour
 
             scoremanager.AddPoints();
         }
-            SetCameraFX.ShakeCamera(2.5f, 0.1f);
+        
+        SetCameraFX.ShakeCamera(2.5f, 0.1f);
 
-            DeleteMatchedObject(objects);
-
-            //DecreaseRowsAbove(row + 1);     
+        DeleteMatchedObject(objects);
+                 
     }
 
     public static void DeleteWholeColumns(int x)
@@ -430,7 +550,7 @@ public class MatrixGrid : MonoBehaviour
         }
             SetCameraFX.ShakeCamera(2.5f, 0.1f);
 
-            DeleteROw(x);
+            DeleteRow(x);
         
     }
 
@@ -482,6 +602,30 @@ public class MatrixGrid : MonoBehaviour
 
     #endregion
 
+
+    public void UpdateAvailableGridPositions()
+    {
+        for (int y = 0; y < MatrixGrid.heightRows; ++y)
+        {
+            for (int x = 0; x < MatrixGrid.widthColumns; ++x)
+            {
+                if (MatrixGrid.grid[x, y] != null)
+                {
+                    if (MatrixGrid.grid[x, y].parent == transform)
+                    {
+                        MatrixGrid.grid[x, y] = null;
+                    }
+                }
+            }
+        }
+
+        foreach (Transform child in transform)
+        {
+            Vector2 roundedPosition = MatrixGrid.RoundVector(child.position);
+
+            MatrixGrid.grid[(int)roundedPosition.x, (int)roundedPosition.y] = child;
+        }
+    }
 
 
 

@@ -240,6 +240,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fade Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5570648350220680852, guid: 3db3d8f82ab2a7743a24ae1dee784a26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db3d8f82ab2a7743a24ae1dee784a26, type: 3}
 --- !u!114 &45097337 stripped
@@ -1311,7 +1316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -677.9, y: 0}
+  m_AnchoredPosition: {x: -603.52, y: 0}
   m_SizeDelta: {x: 1355.8, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &537114567
@@ -1445,8 +1450,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 2.45, y: 4.5}
-  m_SizeDelta: {x: 640, y: 960}
+  m_AnchoredPosition: {x: 2.9361, y: 4.5}
+  m_SizeDelta: {x: 725.6329, y: 960}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &663346838
 GameObject:
@@ -4815,8 +4820,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.5, y: -1}
-  m_SizeDelta: {x: -86.4, y: -47.8}
+  m_AnchoredPosition: {x: 4.850006, y: -1}
+  m_SizeDelta: {x: -87.7, y: -47.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1964128954
 MonoBehaviour:
@@ -5080,7 +5085,7 @@ PrefabInstance:
     - target: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
         type: 3}
       propertyPath: Width
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
         type: 3}
@@ -5104,10 +5109,20 @@ PrefabInstance:
       objectReference: {fileID: 1697093951}
     - target: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
         type: 3}
+      propertyPath: _gridSize.rows
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
+        type: 3}
       propertyPath: explosionPrefab
       value: 
       objectReference: {fileID: 1404468135700548, guid: ad4d25dd5bc079a40935b7c244b992da,
         type: 3}
+    - target: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
+        type: 3}
+      propertyPath: _gridSize.columns
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
         type: 3}
       propertyPath: ScoreEvents.m_PersistentCalls.m_Calls.Array.size
@@ -5218,6 +5233,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2800370369034651129, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3610334181415882410, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
         type: 3}
       propertyPath: menu
@@ -5236,9 +5256,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3610334181415882410, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
         type: 3}
+      propertyPath: _solver
+      value: 
+      objectReference: {fileID: 207942645203876070}
+    - target: {fileID: 3610334181415882410, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
+        type: 3}
       propertyPath: scoreVar
       value: 
       objectReference: {fileID: 11400000, guid: ac13c61c64f9ce04a965f69c427949e4,
         type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcd03adf372ff3c4bba6bb1c2927ba33, type: 3}
+--- !u!1 &207942645203876069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2800370367549842861, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
+    type: 3}
+  m_PrefabInstance: {fileID: 207942645203876068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &207942645203876070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207942645203876069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ec331409d36b341b9b18d4446d7dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _solvermodel:
+    Grid: {fileID: 207942645203876072}
+    Spawner: {fileID: 1400098188}
+  _solverView:
+    HorizontalTotal: 0
+  _solveState: 0
+  HCount: 
+--- !u!114 &207942645203876072 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
+    type: 3}
+  m_PrefabInstance: {fileID: 207942645203876068}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207942645203876069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a87da8b0d6e0643842a4996ae5d27a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

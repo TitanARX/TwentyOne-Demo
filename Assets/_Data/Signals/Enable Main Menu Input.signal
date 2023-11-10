@@ -9,10 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d072701722d75e42993fa9a405e36ec, type: 3}
-  m_Name: LevelInfo 1
+  m_Script: {fileID: 11500000, guid: d6fa2d92fc1b3f34da284357edf89c3b, type: 3}
+  m_Name: Enable Main Menu Input
   m_EditorClassIdentifier: 
-  levelColor: {r: 1, g: 1, b: 1, a: 1}
-  linesToClear: 1
-  levelSpeed: 1
-  bombProbPercentage: 0
