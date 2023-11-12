@@ -59,7 +59,7 @@ public class Solver : SolverBase
             {
                 if (grid[x, y])
                 {
-                    sum += grid[x, y].transform.parent.GetComponent<BlockObject>().Point;
+                    sum += grid[x, y].transform.parent.GetComponent<BlockObject>().PointValue;
 
                     // Break out if the diagonal sum equals 21
                     if (sum == 21)
@@ -103,7 +103,7 @@ public class Solver : SolverBase
                 {
                     if (grid[0, i].parent.TryGetComponent(out BlockObject block))
                     {
-                        Debug.Log("Detected " + block.Point);
+                        Debug.Log("Detected " + block.PointValue);
                     }
                 }
             }
@@ -133,7 +133,7 @@ public class Solver : SolverBase
                 for (int col = 0; col < 6; col++)
                 {
                     // Sum the diagonal elements
-                    sum += grid[row + col, col] != null ? grid[row + col, col].parent.GetComponent<BlockObject>().Point : 0;
+                    sum += grid[row + col, col] != null ? grid[row + col, col].parent.GetComponent<BlockObject>().PointValue : 0;
 
                     // Break out if the sum equals 21
                     if (sum == 21)
@@ -154,7 +154,7 @@ public class Solver : SolverBase
                 {
                     if (grid[0, i].parent.TryGetComponent(out BlockObject block))
                     {
-                        Debug.Log("Detected " + block.Point);
+                        Debug.Log("Detected " + block.PointValue);
                     }
                 }
                 // Do something with the element
@@ -190,7 +190,7 @@ public class Solver : SolverBase
                 {
                     if (grid[row, col].parent.TryGetComponent(out BlockObject block))
                     {
-                        rowSum += block.Point;
+                        rowSum += block.PointValue;
                     }
                 }
             }
@@ -236,7 +236,7 @@ public class Solver : SolverBase
                 {
                     if(grid[row, col].parent.TryGetComponent(out BlockObject block))
                     {
-                        rowSum += block.Point;
+                        rowSum += block.PointValue;
                     }
                 }
             }
@@ -386,7 +386,7 @@ public class Solver : SolverBase
             {
                 if (grid[row, col] != null)
                 {
-                    sum += grid[row, col].parent.GetComponent<BlockObject>().Point;
+                    sum += grid[row, col].parent.GetComponent<BlockObject>().PointValue;
                 }
             }
 

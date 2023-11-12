@@ -3,6 +3,8 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
 using System;
+using UnityEngine.InputSystem;
+
 
 public class BlockSettleArgs : EventArgs 
 {
@@ -20,75 +22,86 @@ public enum BlockState { Dropping, Settled }
 
 public class BlockObject : MonoBehaviour
 {
-    public BlockState state = BlockState.Dropping;
+    #region Private Vars and Backing Stores
 
-    [Tooltip("The percentage chance that a destroyer wildcard will spawn"), Range(0, 100)]
-    public int DestroyerWildcardChance = 10;
-    [Space]
-    [Tooltip("The minimum and maximum value for random point assignment")]
-    public Vector2 RanGenRange = new Vector2(1, 9);
-    [Space]
-    [Tooltip("The point value assigned to this block")]
-    public int Point;
+    //Action For Block Settle State
+    public EventHandler<BlockSettleArgs> OnSettle = (sender, e) => { };
+
+    //Get Reference to the Solver
+    private Solver solver => FindObjectOfType<Solver>();
+
+    //Value Generator
+    private GenerateRandomValue _pointGenerator => FindObjectOfType<GenerateRandomValue>();
+
+    //Player Input
+    private UniversalControls _inputActions;
 
     private float lastFall = 0f;
 
-    private bool nextSpawnedBlock=false;
+    //Refactor
+    private bool spawnNextBlock = false;
 
-    [Header("DELETE THIS")]
-    public bool isDestroyerWildcard;
+    #endregion
 
-    [Header("Movement Events")]
+    public BlockState state = BlockState.Dropping;
+
+    [Header("Cube Relative Events")]
+    [SerializeField]
+    private int _pointValue;
+
+    //Removing This - Deprecate Later
+    [Header("Block Attributes")]
+    public FloatVariable FallSpeed;  
+
+    [Header("Cube Relative Events")]
     public UnityEvent L_MovementEvent;
     public UnityEvent R_MovementEvent;
     public UnityEvent D_MovementEvent;
 
-    [Header("Block Attributes")]
-    public FloatVariable FallSpeed;
-    public IntVariable WildcardChance;
+    //Public Accessors
+    public int PointValue { get => _pointValue; set => _pointValue = value; }
 
-    public Solver solver => GameObject.FindObjectOfType<Solver>();
-
-    public EventHandler<BlockSettleArgs> OnSettle = (sender, e) => { };
+    private void Awake()
+    {
+        //Updated Input Structure
+        _inputActions = new UniversalControls();
+        _inputActions.Player.Movement.Enable();
+        _inputActions.Player.Movement.performed += ProcessPlayerInput;     
+    }
 
 
     private void OnEnable()
     {
+        //Assign Point Value
+        PointValue = _pointGenerator.GenerateCubeValue();
+
+        //Set State
         state = BlockState.Dropping;
 
-        int willDestroyerSpawn = UnityEngine.Random.Range(0, 100);
-
-        DestroyerWildcardChance = WildcardChance.Value;
-
-        if (willDestroyerSpawn > DestroyerWildcardChance)
-        {
-             MatrixGrid.isWildCard=false;
-                Point = UnityEngine.Random.Range((int)RanGenRange.x, (int)RanGenRange.y);
-        }
-        else
-        {
-            MatrixGrid.isWildCard=true;
-                Point = UnityEngine.Random.Range(10,13);           //  < 10  - for single colum>    < 11 -  for single row >   < 12  -   for row and column >
-        }
-        
+        //
+        MatrixGrid.isSuperBlock = _pointGenerator.IsSuperPowerValue(PointValue);
     }
 
-    private void Update()
+    private void ProcessPlayerInput(InputAction.CallbackContext context)
     {
-        // Movement controls via GetKeyDowns
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            MoveBlockLeft();
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        // Get the input vector from the context
+        Vector2 inputVector = context.ReadValue<Vector2>();
+
+        // Determine the direction based on the input vector
+        if (inputVector.x > 0.5f) // Right
         {
             MoveBlockRight();
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) || Time.time - lastFall >= FallSpeed.value)
+        else if (inputVector.x < -0.5f) // Left
+        {
+            MoveBlockLeft();
+        }
+        else if (inputVector.y < -0.5f) // Down
         {
             MoveBlockDown();
         }
     }
+
 
     #region Control movement
     public void MoveBlockLeft()
@@ -151,9 +164,9 @@ public class BlockObject : MonoBehaviour
 
             UpdateAvailableGridPositions();
 
-            nextSpawnedBlock = true;
+            spawnNextBlock = true;
 
-            OnSettle?.Invoke(this, new BlockSettleArgs(Point, transform.position));
+            OnSettle?.Invoke(this, new BlockSettleArgs(PointValue, transform.position));
 
             enabled = false;
 

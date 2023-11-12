@@ -56,7 +56,7 @@ public abstract class SolverBase : MonoBehaviour, ISolve
 
         for (int i = 0; i < array.GetLength(1); i++)
         {
-            sum += array[rowIndex, i] != null ?  array[rowIndex, i].parent.GetComponent<BlockObject>().Point : sum;
+            sum += array[rowIndex, i] != null ?  array[rowIndex, i].parent.GetComponent<BlockObject>().PointValue : sum;
         }
 
         return sum;

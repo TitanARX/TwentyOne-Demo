@@ -14,4 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/3D Tetris/3D Tetris Demo scene.unity
     guid: 7de3b5f84dd9a7f4da7f9091e5903eae
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: dbb016c12fc600341b16f392f4e93052,
+      type: 2}

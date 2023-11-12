@@ -21,7 +21,7 @@ public class MatrixGrid : MonoBehaviour
     public GridSize GridSizeReference { get => _gridSize; set => _gridSize = value; }
 
 
-    public static bool isWildCard;
+    public static bool isSuperBlock;
     public static Transform[,] grid;
 
     public static int heightRows = 7;
@@ -193,7 +193,7 @@ public class MatrixGrid : MonoBehaviour
             {
                 if (grid[index, y] != null)
                 {
-                    CurrentTotal += grid[index, y].parent.GetComponent<BlockObject>().Point;
+                    CurrentTotal += grid[index, y].parent.GetComponent<BlockObject>().PointValue;
                 }
             }
 
@@ -223,7 +223,7 @@ public class MatrixGrid : MonoBehaviour
                 if (grid[x, indexY] == null)
                     break;
 
-                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().Point;
+                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().PointValue;
                     Vector2 temp=new Vector2();
                     temp.x=x;
                     temp.y=indexY;
@@ -234,7 +234,7 @@ public class MatrixGrid : MonoBehaviour
             {
                 if (grid[x, indexY] == null)
                     break;
-                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().Point;
+                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().PointValue;
                     Vector2 temp=new Vector2();
                     temp.x=x;
                     temp.y=indexY;
@@ -275,7 +275,7 @@ public class MatrixGrid : MonoBehaviour
                 if (grid[x, indexY] == null)
                     break;
                 
-                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().Point;
+                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().PointValue;
                     Vector2 temp=new Vector2();
                     temp.x=x;
                     temp.y=indexY;
@@ -290,7 +290,7 @@ public class MatrixGrid : MonoBehaviour
                 if (grid[x, indexY] == null)
                     break;
                 
-                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().Point;
+                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().PointValue;
                     Vector2 temp=new Vector2();
                     temp.x=x;
                     temp.y=indexY;
@@ -326,7 +326,7 @@ public class MatrixGrid : MonoBehaviour
                 if (grid[x, indexY] == null)
                     break;
                 
-                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().Point;
+                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().PointValue;
                     Vector2 temp=new Vector2();
                     temp.x=x;
                     temp.y=indexY;
@@ -344,7 +344,7 @@ public class MatrixGrid : MonoBehaviour
                 if (grid[x, indexY] == null)
                     break;
                 
-                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().Point;
+                    CurrentTotal += grid[x, indexY].parent.GetComponent<BlockObject>().PointValue;
                     Vector2 temp=new Vector2();
                     temp.x=x;
                     temp.y=indexY;
@@ -369,7 +369,7 @@ public class MatrixGrid : MonoBehaviour
     public static bool CheckAllDirectionTargetReach(int indexX, int indexY)
     {
         //whatever the point value is of the current block
-        int currentBlocksPointValue = grid[indexX, indexY].parent.GetComponent<BlockObject>().Point;
+        int currentBlocksPointValue = grid[indexX, indexY].parent.GetComponent<BlockObject>().PointValue;
 
         bool isBonusCube = currentBlocksPointValue > 10;
 
@@ -513,7 +513,7 @@ public class MatrixGrid : MonoBehaviour
     public static void DeleteSelectedObject(List<Vector2> objects)
     {     
 
-        if(!isWildCard)
+        if(!isSuperBlock)
         {
             Scoremanager scoremanager = FindObjectOfType<Scoremanager>();
 
@@ -530,7 +530,7 @@ public class MatrixGrid : MonoBehaviour
     {
         DestroyBlockAudio("2,0,false");
 
-        if (!isWildCard)
+        if (!isSuperBlock)
         {
             scoremanager.AddPoints();
         }
@@ -544,7 +544,7 @@ public class MatrixGrid : MonoBehaviour
     {
         DestroyBlockAudio("2,0,false");
 
-        if (!isWildCard)
+        if (!isSuperBlock)
         {
             scoremanager.AddPoints();
         }

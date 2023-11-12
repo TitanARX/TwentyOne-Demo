@@ -1,51 +1,100 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.DualShock;
 
-
-public enum KeyInputListenerState { Initializing, Listening, Invoked}
+public enum KeyInputListenerState { Initializing, Listening, Invoked }
 
 public class KeyInputListener : MonoBehaviour
 {
+    private UniversalControls _inputDefinitions;
+    private InputAction _movementInput;
+
+    private DualShockGamepad dualShock;
+
     public KeyInputListenerState state = KeyInputListenerState.Listening;
 
-    public UnityEvent OnInputDeteccted;
+    public UnityEvent OnInputDetected;
+
+    private void Awake()
+    {
+        _inputDefinitions = new UniversalControls();
+    }
+
+    private void Start()
+    {
+        state = KeyInputListenerState.Initializing;
+
+
+        // Get the DualShockGamepad instance
+        dualShock = InputSystem.GetDevice<DualShockGamepad>();
+
+      
+    }
+
+    private void OnEnable()
+    {
+        _inputDefinitions.Player.Movement.performed += ProcessMovmentInput;
+        _inputDefinitions.Player.Movement.Enable();
+
+        _inputDefinitions.Player.Input.performed +=ProcessInput;
+        _inputDefinitions.Player.Input.Enable();
+
+    }
+
+    private void OnDisable()
+    {
+        _inputDefinitions.Player.Movement.performed += ProcessMovmentInput;
+        _inputDefinitions.Player.Movement.Disable();
+
+        _inputDefinitions.Player.Input.performed -= ProcessInput;
+        _inputDefinitions.Player.Input.Disable();
+    }
+
 
     public void Init()
     {
         state = KeyInputListenerState.Listening;
     }
 
-    private void Start()
+    private void ProcessInput(InputAction.CallbackContext context)
     {
-        state = KeyInputListenerState.Initializing;
-    }
+        if (state == KeyInputListenerState.Invoked || state == KeyInputListenerState.Initializing)
+            return;
 
-    void Update()
-    {
-        // Check for input from any key except escape or function keys
-        if (Input.anyKeyDown && !Input.GetKey(KeyCode.Escape) && !IsFunctionKey() && state == KeyInputListenerState.Listening)
+        OnInputDetected?.Invoke();
+
+        _movementInput.Disable();
+        _inputDefinitions.Player.Input.Disable();
+
+
+        // Check if the controller is connected
+        if (dualShock != null)
         {
-            // Handle the input here
-            Debug.Log("Key pressed (except for escape or function keys)!");
+            Debug.LogWarning("DualShock controller found.");
 
-            OnInputDeteccted?.Invoke();
-
-            state = KeyInputListenerState.Invoked;
+            // Set the light bar color to blue
+            dualShock.SetLightBarColor(Color.blue);
         }
-    }
-
-    bool IsFunctionKey()
-    {
-        // Check if any function key (F1 to F12) is pressed
-        for (KeyCode keyCode = KeyCode.F1; keyCode <= KeyCode.F12; keyCode++)
+        else
         {
-            if (Input.GetKey(keyCode))
-            {
-                return true;
-            }
+            Debug.LogWarning("DualShock controller not found.");
         }
-        return false;
+
+
+        state = KeyInputListenerState.Invoked;
     }
+
+
+    private void ProcessMovmentInput(InputAction.CallbackContext context)
+    {
+        Debug.Log("Yoooo");
+
+    }
+
+
+
+
 
 
 }

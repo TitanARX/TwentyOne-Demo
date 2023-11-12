@@ -17,7 +17,7 @@ public class DisplayPointTotal : MonoBehaviour
     {
         isWildcard = GetComponent<BlockObject>().isDestroyerWildcard;
 
-        BlockObjectPointValue = GetComponent<BlockObject>().Point;
+        BlockObjectPointValue = GetComponent<BlockObject>().PointValue;
 
         //rend.material = TextureBank[BlockObjectPointValue - 1];
 
