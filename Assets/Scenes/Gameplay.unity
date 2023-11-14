@@ -5333,7 +5333,7 @@ MonoBehaviour:
   lastValue: -1
   consecutiveCount: 0
   maxConsecutive: 2
-  superPowerPercentage: 5
+  superPowerPercentage: 25
 --- !u!114 &207942645203876072 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,

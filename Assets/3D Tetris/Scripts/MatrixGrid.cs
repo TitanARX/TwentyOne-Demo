@@ -374,7 +374,7 @@ public class MatrixGrid : MonoBehaviour
     {
         int currentBlocksPointValue = grid[indexX, indexY].parent.GetComponent<BlockObject>().PointValue;
 
-        bool isBonusCube = currentBlocksPointValue >= 10;
+        bool isBonusCube = currentBlocksPointValue > 9;
 
         // If the current block is a bonus cube, handle it separately
         if (isBonusCube)
@@ -405,12 +405,46 @@ public class MatrixGrid : MonoBehaviour
         if (verticalCheck || horizontalCheck || rightDiagonalCheck || leftDiagonalCheck)
         {
             // Here you can add code to destroy the blocks or handle other logic
-            // Example: DeleteSelectedObject(objects);
+            // For regular cubes, let's destroy the blocks that contributed to the match
+            if (verticalCheck)
+            {
+                DeleteSelectedObject(GetVerticalBlockObjects(indexX));
+            }
+            else if (horizontalCheck)
+            {
+                DeleteSelectedObject(horizontalBlockObjects);
+            }
+            else if (rightDiagonalCheck)
+            {
+                DeleteSelectedObject(rightDiagonalBlockObjects);
+            }
+            else if (leftDiagonalCheck)
+            {
+                DeleteSelectedObject(leftDiagonalBlockObjects);
+            }
+
             return true;
         }
 
         return false;
     }
+
+    private static List<Vector2> GetVerticalBlockObjects(int indexX)
+    {
+        List<Vector2> verticalBlockObjects = new List<Vector2>();
+
+        for (int y = 0; y < heightRows; ++y)
+        {
+            if (grid[indexX, y] == null)
+                continue;
+
+            verticalBlockObjects.Add(new Vector2(indexX, y));
+        }
+
+        return verticalBlockObjects;
+    }
+
+
 
 
 
