@@ -65,7 +65,7 @@ public class GenerateRandomValue : MonoBehaviour
         }
         else
         {
-            return UnityEngine.Random.Range(0, 10); // Regular values (0 to 9)
+            return UnityEngine.Random.Range(0, 9); // Regular values (0 to 9)
         }
     }
 }

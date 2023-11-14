@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/LoadingScreen.unity
     guid: 1857ea5baac5a5b4993b3802c91a0ed4
   - enabled: 1
-    path: Assets/3D Tetris/3D Tetris Demo scene.unity
-    guid: 7de3b5f84dd9a7f4da7f9091e5903eae
+    path: Assets/Scenes/Gameplay.unity
+    guid: 204bba36f73e1514082f813596d9baab
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: dbb016c12fc600341b16f392f4e93052,
       type: 2}

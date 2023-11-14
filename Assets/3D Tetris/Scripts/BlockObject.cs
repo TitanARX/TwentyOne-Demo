@@ -27,6 +27,8 @@ public class BlockObject : MonoBehaviour
     //Action For Block Settle State
     public EventHandler<BlockSettleArgs> OnSettle = (sender, e) => { };
 
+    public EventHandler<SpawnEventArgs> OnSpawnBlock = (e, sender) => { };
+
     //Get Reference to the Solver
     private Solver solver => FindObjectOfType<Solver>();
 
@@ -41,6 +43,8 @@ public class BlockObject : MonoBehaviour
     //Refactor
     private bool spawnNextBlock = false;
 
+    public int solves = 0;
+
     #endregion
 
     public BlockState state = BlockState.Dropping;
@@ -48,6 +52,9 @@ public class BlockObject : MonoBehaviour
     [Header("Cube Relative Events")]
     [SerializeField]
     private int _pointValue;
+
+    [SerializeField]
+    private bool _isSuperBlock;
 
     //Removing This - Deprecate Later
     [Header("Block Attributes")]
@@ -60,6 +67,7 @@ public class BlockObject : MonoBehaviour
 
     //Public Accessors
     public int PointValue { get => _pointValue; set => _pointValue = value; }
+    public bool IsSuperBlock { get => _isSuperBlock; set => _isSuperBlock = value; }
 
     private void Awake()
     {
@@ -69,7 +77,6 @@ public class BlockObject : MonoBehaviour
         _inputActions.Player.Movement.performed += ProcessPlayerInput;     
     }
 
-
     private void OnEnable()
     {
         //Assign Point Value
@@ -78,12 +85,31 @@ public class BlockObject : MonoBehaviour
         //Set State
         state = BlockState.Dropping;
 
-        //
-        MatrixGrid.isSuperBlock = _pointGenerator.IsSuperPowerValue(PointValue);
+        //What Type of Block
+        IsSuperBlock = _pointGenerator.IsSuperPowerValue(PointValue);
+
+        MatrixGrid.isSuperBlock = IsSuperBlock;
     }
+
+    private void Update()
+    {
+        if (state == BlockState.Settled)
+            return;
+
+        // Check if enough time has passed since the last fallg
+        if (Time.time - lastFall >= 1.0f)
+        {
+            MoveBlockDown();
+            lastFall = Time.time; // Update the last fall time
+        }
+    }
+
 
     private void ProcessPlayerInput(InputAction.CallbackContext context)
     {
+        if (state == BlockState.Settled)
+            return;
+
         // Get the input vector from the context
         Vector2 inputVector = context.ReadValue<Vector2>();
 
@@ -130,14 +156,12 @@ public class BlockObject : MonoBehaviour
             transform.position += new Vector3(-1, 0, 0);
     }
 
-    public int solves = 0;
+
 
     public void MoveBlockDown()
     {
-        //External Events
         D_MovementEvent.Invoke();
 
-        //Move Block Down
         transform.position += new Vector3(0, -1, 0);
 
         //Check if blocks Current Position is Empty
@@ -151,67 +175,16 @@ public class BlockObject : MonoBehaviour
             //Bump Cube Up 1 Space
             transform.position += new Vector3(0, 1, 0);
 
-            //Gather Last point Before Destroying Block
-            //solver.ReferencePosition = transform.position;
-
-            //Check if the target value (21) has been met
-
-            //Debug.Log("Checking > Vertical > Horizontal > Right Diagonal > Left Diagonal Values");
-
-            //bool targetValueReached = MatrixGrid.CheckAllDirectionTargetReach((int)transform.position.x, (int)transform.position.y);
+            bool targetValueReached = MatrixGrid.CheckAllDirectionTargetReach((int)transform.position.x, (int)transform.position.y);
 
             //Update Grid Positions after Block Settles
 
             UpdateAvailableGridPositions();
 
-            spawnNextBlock = true;
+            state = BlockState.Settled;
 
+            //Fire Event and Send Position of Block and Point Value
             OnSettle?.Invoke(this, new BlockSettleArgs(PointValue, transform.position));
-
-            enabled = false;
-
-            #region Deprecate Soon
-
-
-            /*
-            if (targetValueReached && !nextSpawnedBlock)
-            {
-                solver.SumGridRows();
-
-                if (!solver.DoubleCheck())
-                {
-                    Debug.Log("No Chaining Detected");
-
-                    //FindObjectOfType<BlockSpawner>().CallInstantiateCouritine((int)transform.position.y);
-                }
-                else
-                {
-                    Debug.Log("Chaining Detected");
-                }
-
-                nextSpawnedBlock = true;
-                //Wait for 2 seconds after match then spawn new cube
-
-                //Disable Block
-                enabled = false;
-
-            }
-            else if (!nextSpawnedBlock)
-            {
-                Debug.Log(solver.SumGridRows());
-
-                nextSpawnedBlock = true;
-
-                //Spawn Block - Value not met
-                FindObjectOfType<BlockSpawner>().SpawnBlock((int)transform.position.y);
-
-                //Disable Block
-                enabled = false;
-            }
-            */
-
-            #endregion
-
         }
 
         lastFall = Time.time;
@@ -236,7 +209,6 @@ public class BlockObject : MonoBehaviour
 
     public void UpdateAvailableGridPositions()
     {
-
         for (int y = 0; y < MatrixGrid.heightRows; ++y)
         {
             for (int x = 0; x < MatrixGrid.widthColumns; ++x)
@@ -260,4 +232,9 @@ public class BlockObject : MonoBehaviour
     }
 
   
+    public void SpawnNewCube()
+    {
+        OnSpawnBlock(this, null);
+    }
+
 }

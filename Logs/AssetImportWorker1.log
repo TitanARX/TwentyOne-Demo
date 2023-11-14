@@ -1,0 +1,1458 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.6f1 (338bb68529b2) revision 3378102'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19045.3570; Version 2009; 64bit' Language: 'en' Physical Memory: 16332 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker1
+-projectPath
+G:/Unity/TwentyOne-Demo
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+59293
+Successfully changed project path to: G:/Unity/TwentyOne-Demo
+G:/Unity/TwentyOne-Demo
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 216.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.6f1 (338bb68529b2)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path G:/Unity/TwentyOne-Demo/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1070 (ID=0x1b81)
+    Vendor:   
+    VRAM:     8081 MB
+    Driver:   31.0.15.3623
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56352
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004853 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 204.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  4.883 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007789 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 203.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.250 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 2.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4175 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 204.7 MB.
+System memory in use after: 204.9 MB.
+
+Unloading 59 unused Assets to reduce memory usage. Loaded Objects now: 4601.
+Total: 10.527300 ms (FindLiveObjects: 1.478500 ms CreateObjectMapping: 0.306200 ms MarkObjects: 8.587700 ms  DeleteObjects: 0.153400 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/TitanARX
+  artifactKey: Guid(9c539296ccc7bb54e84365c5fd1c89ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX using Guid(9c539296ccc7bb54e84365c5fd1c89ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84e4adf55e72438b58ff13c66271db1a') in 0.022915 seconds
+  Import took 0.039741 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.119306 seconds.
+  path: Assets/TitanARX/Core
+  artifactKey: Guid(39a7f3f709deec049a79182455f8e895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Core using Guid(39a7f3f709deec049a79182455f8e895) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59f1c0d1f16b4b865e98bdaa2be293b5') in 0.011804 seconds
+  Import took 0.034630 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.831507 seconds.
+  path: Assets/TitanARX/Runtime
+  artifactKey: Guid(2be6abb5bf3fc3447a01dca7759d1e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime using Guid(2be6abb5bf3fc3447a01dca7759d1e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df8edb817463906eb012c1797f5fb280') in 0.011676 seconds
+  Import took 0.026641 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000766 seconds.
+  path: Assets/TitanARX/Runtime
+  artifactKey: Guid(2be6abb5bf3fc3447a01dca7759d1e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime using Guid(2be6abb5bf3fc3447a01dca7759d1e45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df8edb817463906eb012c1797f5fb280') in 0.003049 seconds
+  Import took 0.012788 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.022268 seconds.
+  path: Assets/TitanARX/Editor
+  artifactKey: Guid(16afe767a60cb364894f232ee8f431ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Editor using Guid(16afe767a60cb364894f232ee8f431ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25896435cca3857ff491728f65611e80') in 0.010210 seconds
+  Import took 0.033101 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.552507 seconds.
+  path: Assets/TitanARX/Content
+  artifactKey: Guid(2ead11f54fd304f4fb191e6a29fa9bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Content using Guid(2ead11f54fd304f4fb191e6a29fa9bc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b15f6c119e56c4e2ae393d9490e02e44') in 0.013512 seconds
+  Import took 0.028795 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 58.763497 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling
+  artifactKey: Guid(b858c1e7e88e7c441b38b9d6553557ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling using Guid(b858c1e7e88e7c441b38b9d6553557ef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e818da2b08126291b5ba6b1990b79967') in 0.012520 seconds
+  Import took 0.035799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1102.976662 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/SerializableDictionary.cs
+  artifactKey: Guid(ed4faa20b9eeb0f43aed67c955b9b522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/SerializableDictionary.cs using Guid(ed4faa20b9eeb0f43aed67c955b9b522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9a7bcb64ef374ee5e3696c67745efd2') in 0.056830 seconds
+  Import took 0.067856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.652148 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/SerializableDictionary.cs
+  artifactKey: Guid(ed4faa20b9eeb0f43aed67c955b9b522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/SerializableDictionary.cs using Guid(ed4faa20b9eeb0f43aed67c955b9b522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e85d3c11c858f4e7fa4dba9f6ed83c') in 0.003253 seconds
+  Import took 0.015194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000814 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/SerializableDictionary.cs
+  artifactKey: Guid(ed4faa20b9eeb0f43aed67c955b9b522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/SerializableDictionary.cs using Guid(ed4faa20b9eeb0f43aed67c955b9b522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16e85d3c11c858f4e7fa4dba9f6ed83c') in 0.002951 seconds
+  Import took 0.011869 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.112012 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/IDataPersistance.cs
+  artifactKey: Guid(a48431ec6eb467f43a1e285d9de63135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/IDataPersistance.cs using Guid(a48431ec6eb467f43a1e285d9de63135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7b1701fb81fecf699f363bee0743cf5') in 0.013003 seconds
+  Import took 0.042921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.209214 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/IDataPersistance.cs
+  artifactKey: Guid(a48431ec6eb467f43a1e285d9de63135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/IDataPersistance.cs using Guid(a48431ec6eb467f43a1e285d9de63135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbf848b29f9b1e218119c651bbc2b6dc') in 0.003767 seconds
+  Import took 0.012728 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.447860 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/GameData.cs
+  artifactKey: Guid(3c18609a0a908d94c8d83a72f60e0f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/GameData.cs using Guid(3c18609a0a908d94c8d83a72f60e0f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f9d59a0dc7c5f88c7676db2d2a96c93') in 0.011343 seconds
+  Import took 0.019537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.618039 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/GameData.cs
+  artifactKey: Guid(3c18609a0a908d94c8d83a72f60e0f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/GameData.cs using Guid(3c18609a0a908d94c8d83a72f60e0f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '885e448dbc74a3c87055fb9653ab5053') in 0.004331 seconds
+  Import took 0.025836 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.818807 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/FileDataHandler.cs
+  artifactKey: Guid(155504861a57399459f9bbaa0b3a4406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/FileDataHandler.cs using Guid(155504861a57399459f9bbaa0b3a4406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c1622efeda7de8d2bc941f53a182b65') in 0.010032 seconds
+  Import took 0.028522 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.719993 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/FileDataHandler.cs
+  artifactKey: Guid(155504861a57399459f9bbaa0b3a4406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/FileDataHandler.cs using Guid(155504861a57399459f9bbaa0b3a4406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59fcde20f5dd39d0bb44e297395bbfd6') in 0.003542 seconds
+  Import took 0.014243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001424 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/FileDataHandler.cs
+  artifactKey: Guid(155504861a57399459f9bbaa0b3a4406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/FileDataHandler.cs using Guid(155504861a57399459f9bbaa0b3a4406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59fcde20f5dd39d0bb44e297395bbfd6') in 0.002473 seconds
+  Import took 0.012051 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.685565 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/DataPersistenceManager.cs
+  artifactKey: Guid(e5f581e659944684faadc7913f986ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/DataPersistenceManager.cs using Guid(e5f581e659944684faadc7913f986ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7dd08a5ab5685982a6d9cd62b2d9020') in 0.013484 seconds
+  Import took 0.032288 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.754597 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/DataPersistenceManager.cs
+  artifactKey: Guid(e5f581e659944684faadc7913f986ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/DataPersistenceManager.cs using Guid(e5f581e659944684faadc7913f986ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cd956e49627bb0c639b8741c23e7424') in 0.006925 seconds
+  Import took 0.026253 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.521396 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample
+  artifactKey: Guid(0ce9e75d0542b1b46936290b0ad76861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample using Guid(0ce9e75d0542b1b46936290b0ad76861) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b4251d0f2f96d87e36ffe2c2caf76a2') in 0.010747 seconds
+  Import took 0.025124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.998354 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/AudioSettingsData.cs
+  artifactKey: Guid(f869546f0bcbe5348af881a3a8e87c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/AudioSettingsData.cs using Guid(f869546f0bcbe5348af881a3a8e87c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8404f2dd0b5503166c7e0660aa4d473') in 0.011366 seconds
+  Import took 0.030096 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.623836 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/AudioSettingsData.cs
+  artifactKey: Guid(f869546f0bcbe5348af881a3a8e87c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/AudioSettingsData.cs using Guid(f869546f0bcbe5348af881a3a8e87c04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9500bbb6225ad7aba0fa9f06812041b8') in 0.003467 seconds
+  Import took 0.013782 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.439826 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/GraphicsSettingsData.cs
+  artifactKey: Guid(e4d44fea8832c564a9ade37d05258685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/GraphicsSettingsData.cs using Guid(e4d44fea8832c564a9ade37d05258685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42797825a9ed65cb39d8b47b8a98e633') in 0.010762 seconds
+  Import took 0.036105 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.015852 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/GraphicsSettingsData.cs
+  artifactKey: Guid(e4d44fea8832c564a9ade37d05258685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/GraphicsSettingsData.cs using Guid(e4d44fea8832c564a9ade37d05258685) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98acb37818664be291542cb58c0d7d9c') in 0.003760 seconds
+  Import took 0.018149 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.367756 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/PlayerData.cs
+  artifactKey: Guid(5d29d939304d5994f9cc48c24eb02f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/PlayerData.cs using Guid(5d29d939304d5994f9cc48c24eb02f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9985357bbb7afc5b0160a628b478c900') in 0.014160 seconds
+  Import took 0.030012 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.112307 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/PlayerData.cs
+  artifactKey: Guid(5d29d939304d5994f9cc48c24eb02f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/PlayerData.cs using Guid(5d29d939304d5994f9cc48c24eb02f18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a694cb457791502dfc5baeb6b004c01') in 0.003241 seconds
+  Import took 0.036847 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.974217 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/SettingsData.cs
+  artifactKey: Guid(7630be837fd05464ea71f5b7d9904559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/SettingsData.cs using Guid(7630be837fd05464ea71f5b7d9904559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ee983dccac84270f8ec1d7ca1bb08ff') in 0.013697 seconds
+  Import took 0.029805 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.811828 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/SettingsData.cs
+  artifactKey: Guid(7630be837fd05464ea71f5b7d9904559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/SettingsData.cs using Guid(7630be837fd05464ea71f5b7d9904559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06f05487e6513c354dd6a12e8f64c942') in 0.003003 seconds
+  Import took 0.011403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000753 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/SettingsData.cs
+  artifactKey: Guid(7630be837fd05464ea71f5b7d9904559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/SettingsData.cs using Guid(7630be837fd05464ea71f5b7d9904559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06f05487e6513c354dd6a12e8f64c942') in 0.002957 seconds
+  Import took 0.012178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.002161 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/VideoSettingsData.cs
+  artifactKey: Guid(00f8b6b13f6e2de4db3d531521e55d4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/VideoSettingsData.cs using Guid(00f8b6b13f6e2de4db3d531521e55d4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08192a7a891649a496766769be9f917c') in 0.012288 seconds
+  Import took 0.025625 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.616850 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/VideoSettingsData.cs
+  artifactKey: Guid(00f8b6b13f6e2de4db3d531521e55d4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/Sample/VideoSettingsData.cs using Guid(00f8b6b13f6e2de4db3d531521e55d4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee8f48168a0a7dd5be9ed2049db949df') in 0.014022 seconds
+  Import took 0.040856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 509.839384 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/RoundEvents
+  artifactKey: Guid(38e688d5bde10be40a649ffde76c0ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/RoundEvents using Guid(38e688d5bde10be40a649ffde76c0ede) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b46b9e9d8e5e99bc6a68d0c00dc7dc0') in 0.013780 seconds
+  Import took 0.031770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.591527 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/SceneEvents
+  artifactKey: Guid(1de9f71a7f9c6224882e78510dca45dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/SceneEvents using Guid(1de9f71a7f9c6224882e78510dca45dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82424e229cd8d2f961f8780c1c0e1cf6') in 0.012740 seconds
+  Import took 0.037236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.653546 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/EventBus.cs
+  artifactKey: Guid(1797aaea4569dca4bb4e241ff8cab530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/EventBus.cs using Guid(1797aaea4569dca4bb4e241ff8cab530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe5bd38c4b99ebd471c065a77bb2ed02') in 0.011136 seconds
+  Import took 0.027956 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 639.997183 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/FileDataHandler.cs
+  artifactKey: Guid(155504861a57399459f9bbaa0b3a4406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/FileDataHandler.cs using Guid(155504861a57399459f9bbaa0b3a4406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6107f1b5b43553fa38750eb85a25aa61') in 0.003483 seconds
+  Import took 0.014412 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000496 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/FileDataHandler.cs
+  artifactKey: Guid(155504861a57399459f9bbaa0b3a4406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/FileDataHandler.cs using Guid(155504861a57399459f9bbaa0b3a4406) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6107f1b5b43553fa38750eb85a25aa61') in 0.003117 seconds
+  Import took 0.011990 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010242 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.02 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.926 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.8 MB.
+System memory in use after: 178.0 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4628.
+Total: 9.009700 ms (FindLiveObjects: 0.916000 ms CreateObjectMapping: 0.251400 ms MarkObjects: 7.792000 ms  DeleteObjects: 0.048400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 110.572381 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/DataPersistenceManager.cs
+  artifactKey: Guid(e5f581e659944684faadc7913f986ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/DataPersistenceManager.cs using Guid(e5f581e659944684faadc7913f986ff8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a90b000dbcf2eb19fbaec251dadb6c17') in 0.009628 seconds
+  Import took 0.035498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.439623 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/PubSubChannelList.cs
+  artifactKey: Guid(12129186c6803824f88e4ceaafa2d50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/PubSubChannelList.cs using Guid(12129186c6803824f88e4ceaafa2d50f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7fa242f105661c4b891f9e9d406327d7') in 0.015255 seconds
+  Import took 0.023996 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 294.285553 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents
+  artifactKey: Guid(5483119f811e0174184f0887c65f9776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents using Guid(5483119f811e0174184f0887c65f9776) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65054d085c792ea7c1479d9866680b6d') in 0.016915 seconds
+  Import took 0.041425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.456985 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/GameEvents
+  artifactKey: Guid(2a370f40a219d984bb7aad6b922879b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/GameEvents using Guid(2a370f40a219d984bb7aad6b922879b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '327cf3f9efd89f44eff503dc96e11144') in 0.012559 seconds
+  Import took 0.038784 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 457.485814 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence
+  artifactKey: Guid(96263497e6282514fbf5ac7b2678f46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence using Guid(96263497e6282514fbf5ac7b2678f46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b3f5eca6900328a1d189a0816504a66') in 0.010732 seconds
+  Import took 0.034875 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.874893 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/GameData.cs
+  artifactKey: Guid(3c18609a0a908d94c8d83a72f60e0f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/GameData.cs using Guid(3c18609a0a908d94c8d83a72f60e0f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4510788e3ac2d6b07e7336301decd0dd') in 0.006232 seconds
+  Import took 0.022468 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.015300 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/GameData.cs
+  artifactKey: Guid(3c18609a0a908d94c8d83a72f60e0f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/GameData.cs using Guid(3c18609a0a908d94c8d83a72f60e0f34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4510788e3ac2d6b07e7336301decd0dd') in 0.003231 seconds
+  Import took 0.013180 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.881533 seconds.
+  path: Assets/TitanARX/Runtime/Core/Data_Persistence/SerializableDictionary.cs
+  artifactKey: Guid(ed4faa20b9eeb0f43aed67c955b9b522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Data_Persistence/SerializableDictionary.cs using Guid(ed4faa20b9eeb0f43aed67c955b9b522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f80bf86b506a55817b90c3f2fa63e68b') in 0.005584 seconds
+  Import took 0.034395 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 221.129954 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/EventBus.cs
+  artifactKey: Guid(1797aaea4569dca4bb4e241ff8cab530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/EventBus.cs using Guid(1797aaea4569dca4bb4e241ff8cab530) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb3de3e9cfeb3e556801b8fccb137270') in 0.003493 seconds
+  Import took 0.012070 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.638136 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/PubSub.cs
+  artifactKey: Guid(45c8af1b87c2bbc408c41d9602fd14bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/PubSub.cs using Guid(45c8af1b87c2bbc408c41d9602fd14bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c88a41304431f0bf100ef406397a9ce3') in 0.014467 seconds
+  Import took 0.040445 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.142918 seconds.
+  path: Assets/3D Tetris/Scripts/Solver.cs
+  artifactKey: Guid(78ec331409d36b341b9b18d4446d7dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D Tetris/Scripts/Solver.cs using Guid(78ec331409d36b341b9b18d4446d7dd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7936c731fbeb9277317e2eba1c9b01c') in 0.016492 seconds
+  Import took 0.026837 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.014827 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/GameEvents/GameEndEvent.cs
+  artifactKey: Guid(ab62c73b9d4e1b342b1493f32dbd00de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/GameEvents/GameEndEvent.cs using Guid(ab62c73b9d4e1b342b1493f32dbd00de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3463c29ad1f4413d8c870392681ec200') in 0.011529 seconds
+  Import took 0.061648 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.961185 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/GameEvents/GameStartEvent.cs
+  artifactKey: Guid(9fd1e9c2fd2ce0040b41b27296571a01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/GameEvents/GameStartEvent.cs using Guid(9fd1e9c2fd2ce0040b41b27296571a01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '596eaeb2cf62ff20631e9235e008b0b0') in 0.010784 seconds
+  Import took 0.036135 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 22.066503 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/SceneEvents/SceneLoadedEvent.cs
+  artifactKey: Guid(e0a2b4d5a8f47fe40a35c25cf8c567bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/SceneEvents/SceneLoadedEvent.cs using Guid(e0a2b4d5a8f47fe40a35c25cf8c567bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f110d1d504781b943c6bb206bfa7502') in 0.018074 seconds
+  Import took 0.061145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.567545 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/SceneEvents/SceneChangeRequestEvent.cs
+  artifactKey: Guid(ace2708f7ae9ebc4b802cdc793eec355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/SceneEvents/SceneChangeRequestEvent.cs using Guid(ace2708f7ae9ebc4b802cdc793eec355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af6a9dff55ae2f27d6ca8d15c9e1d3a9') in 0.025010 seconds
+  Import took 0.041375 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.784978 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/SceneEvents/SceneUnloadedEvent.cs
+  artifactKey: Guid(911dcc8838348954784f8d7160e318d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/SceneEvents/SceneUnloadedEvent.cs using Guid(911dcc8838348954784f8d7160e318d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6a1eb7ff19477b7d463ecac9213cf24') in 0.014721 seconds
+  Import took 0.032419 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.479610 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents/TimerResumeEvent.cs
+  artifactKey: Guid(aa360ed4e6ce56547bc2ba8569dd9d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents/TimerResumeEvent.cs using Guid(aa360ed4e6ce56547bc2ba8569dd9d77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e746616238c71727798197a4ecf1ecc') in 0.018481 seconds
+  Import took 0.028164 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.829100 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents/TimerCanceledEvent.cs
+  artifactKey: Guid(812c654bcce648a42b0458c2f5288673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents/TimerCanceledEvent.cs using Guid(812c654bcce648a42b0458c2f5288673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e933264703e8501aa55c34d2a8f4778') in 0.011503 seconds
+  Import took 0.020463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.796599 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents/TimerEndEvent.cs
+  artifactKey: Guid(84e30c55c362de74bb774cd78ab3d371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents/TimerEndEvent.cs using Guid(84e30c55c362de74bb774cd78ab3d371) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd6c2fc9bb77a5f16ab1269a23194c01') in 0.012458 seconds
+  Import took 0.025318 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.824157 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents/TimerPausedEvent.cs
+  artifactKey: Guid(89e1a916d960a254b8b6ccc74d2b3db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents/TimerPausedEvent.cs using Guid(89e1a916d960a254b8b6ccc74d2b3db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9378d806aedb753d76ff21289c305f5') in 0.011807 seconds
+  Import took 0.021459 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.001291 seconds.
+  path: Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents/TimerStartEvent.cs
+  artifactKey: Guid(592c9c6155f88bb4f91950fbaf0849f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TitanARX/Runtime/Core/Event_Handling/Sample/TimerEvents/TimerStartEvent.cs using Guid(592c9c6155f88bb4f91950fbaf0849f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8380201c577b6922b9c0d46d41b755f6') in 0.011126 seconds
+  Import took 0.028218 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.364986 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.38 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.780 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.8 MB.
+System memory in use after: 178.1 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4631.
+Total: 11.129400 ms (FindLiveObjects: 1.293500 ms CreateObjectMapping: 0.429700 ms MarkObjects: 9.305500 ms  DeleteObjects: 0.096600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010466 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.005 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.9 MB.
+System memory in use after: 178.1 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4634.
+Total: 8.924400 ms (FindLiveObjects: 0.895500 ms CreateObjectMapping: 0.242600 ms MarkObjects: 7.736000 ms  DeleteObjects: 0.048700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009455 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.950 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.9 MB.
+System memory in use after: 178.1 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4637.
+Total: 8.701200 ms (FindLiveObjects: 0.776900 ms CreateObjectMapping: 0.293300 ms MarkObjects: 7.585200 ms  DeleteObjects: 0.044400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009312 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.05 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.884 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.9 MB.
+System memory in use after: 178.1 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4640.
+Total: 8.403300 ms (FindLiveObjects: 0.753800 ms CreateObjectMapping: 0.229000 ms MarkObjects: 7.359300 ms  DeleteObjects: 0.056200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010402 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.888 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.9 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4643.
+Total: 8.722700 ms (FindLiveObjects: 0.774200 ms CreateObjectMapping: 0.211500 ms MarkObjects: 7.688400 ms  DeleteObjects: 0.046800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008458 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.947 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.9 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4646.
+Total: 8.046600 ms (FindLiveObjects: 0.774400 ms CreateObjectMapping: 0.208000 ms MarkObjects: 7.020700 ms  DeleteObjects: 0.042300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010122 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.36 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.863 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.9 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4649.
+Total: 8.219000 ms (FindLiveObjects: 0.909700 ms CreateObjectMapping: 0.234800 ms MarkObjects: 7.024700 ms  DeleteObjects: 0.047700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007967 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.861 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.9 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4652.
+Total: 8.430500 ms (FindLiveObjects: 0.829000 ms CreateObjectMapping: 0.226800 ms MarkObjects: 7.324800 ms  DeleteObjects: 0.048200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009469 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.873 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.9 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4655.
+Total: 8.672300 ms (FindLiveObjects: 0.895200 ms CreateObjectMapping: 0.237900 ms MarkObjects: 7.470600 ms  DeleteObjects: 0.066500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011864 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.888 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.9 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4658.
+Total: 9.233500 ms (FindLiveObjects: 0.844400 ms CreateObjectMapping: 0.214900 ms MarkObjects: 8.117200 ms  DeleteObjects: 0.055500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008528 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.987 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 177.9 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4661.
+Total: 9.202400 ms (FindLiveObjects: 0.976000 ms CreateObjectMapping: 0.243300 ms MarkObjects: 7.914900 ms  DeleteObjects: 0.066200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009982 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.859 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4664.
+Total: 8.431000 ms (FindLiveObjects: 0.813300 ms CreateObjectMapping: 0.251000 ms MarkObjects: 7.319300 ms  DeleteObjects: 0.045500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009013 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.889 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4667.
+Total: 8.602100 ms (FindLiveObjects: 0.806200 ms CreateObjectMapping: 0.203800 ms MarkObjects: 7.539800 ms  DeleteObjects: 0.050100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009694 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.932 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4670.
+Total: 8.132600 ms (FindLiveObjects: 0.781100 ms CreateObjectMapping: 0.204400 ms MarkObjects: 7.100100 ms  DeleteObjects: 0.045300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010799 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.899 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4673.
+Total: 9.983800 ms (FindLiveObjects: 1.022300 ms CreateObjectMapping: 0.495700 ms MarkObjects: 8.415500 ms  DeleteObjects: 0.047500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008763 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.876 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4676.
+Total: 9.333000 ms (FindLiveObjects: 0.768200 ms CreateObjectMapping: 0.251200 ms MarkObjects: 8.258600 ms  DeleteObjects: 0.053300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008671 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.37 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.056 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4679.
+Total: 9.167300 ms (FindLiveObjects: 0.801700 ms CreateObjectMapping: 0.205000 ms MarkObjects: 8.101800 ms  DeleteObjects: 0.056500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010876 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.917 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4682.
+Total: 9.724500 ms (FindLiveObjects: 0.751600 ms CreateObjectMapping: 0.218500 ms MarkObjects: 8.686500 ms  DeleteObjects: 0.065500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013124 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.887 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4685.
+Total: 8.408900 ms (FindLiveObjects: 0.766700 ms CreateObjectMapping: 0.248800 ms MarkObjects: 7.341500 ms  DeleteObjects: 0.050100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008075 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.856 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4688.
+Total: 9.760800 ms (FindLiveObjects: 0.792400 ms CreateObjectMapping: 0.262300 ms MarkObjects: 8.650400 ms  DeleteObjects: 0.054000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009664 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.867 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4691.
+Total: 8.345300 ms (FindLiveObjects: 0.964300 ms CreateObjectMapping: 0.217200 ms MarkObjects: 7.115300 ms  DeleteObjects: 0.045900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008812 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.855 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4694.
+Total: 8.048200 ms (FindLiveObjects: 0.791500 ms CreateObjectMapping: 0.222100 ms MarkObjects: 6.991400 ms  DeleteObjects: 0.041600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008807 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.863 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4697.
+Total: 8.200200 ms (FindLiveObjects: 0.808900 ms CreateObjectMapping: 0.201300 ms MarkObjects: 7.144700 ms  DeleteObjects: 0.043700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009916 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.855 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.0 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4700.
+Total: 8.786100 ms (FindLiveObjects: 0.862400 ms CreateObjectMapping: 0.407900 ms MarkObjects: 7.453600 ms  DeleteObjects: 0.059700 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008941 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.853 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.17 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4703.
+Total: 8.376200 ms (FindLiveObjects: 0.819100 ms CreateObjectMapping: 0.201900 ms MarkObjects: 7.308700 ms  DeleteObjects: 0.045000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010954 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.916 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4706.
+Total: 8.045700 ms (FindLiveObjects: 0.787700 ms CreateObjectMapping: 0.211500 ms MarkObjects: 7.001100 ms  DeleteObjects: 0.044000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008490 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.089 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4709.
+Total: 9.773500 ms (FindLiveObjects: 0.806800 ms CreateObjectMapping: 0.228800 ms MarkObjects: 8.686900 ms  DeleteObjects: 0.048900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007886 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.877 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4712.
+Total: 7.826700 ms (FindLiveObjects: 0.750300 ms CreateObjectMapping: 0.234900 ms MarkObjects: 6.790200 ms  DeleteObjects: 0.049600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008967 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.876 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4715.
+Total: 8.662100 ms (FindLiveObjects: 0.778200 ms CreateObjectMapping: 0.206600 ms MarkObjects: 7.629700 ms  DeleteObjects: 0.045600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009793 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.509 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4718.
+Total: 9.829100 ms (FindLiveObjects: 0.847600 ms CreateObjectMapping: 0.217800 ms MarkObjects: 8.713000 ms  DeleteObjects: 0.048900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010070 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.901 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4721.
+Total: 10.476300 ms (FindLiveObjects: 0.893700 ms CreateObjectMapping: 0.213100 ms MarkObjects: 9.305800 ms  DeleteObjects: 0.061500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009745 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.975 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4724.
+Total: 10.790300 ms (FindLiveObjects: 0.838900 ms CreateObjectMapping: 0.216900 ms MarkObjects: 9.673600 ms  DeleteObjects: 0.058400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009907 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.849 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.4 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4727.
+Total: 8.701700 ms (FindLiveObjects: 0.802800 ms CreateObjectMapping: 0.218000 ms MarkObjects: 7.631100 ms  DeleteObjects: 0.048200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009064 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.981 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.4 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4730.
+Total: 8.438800 ms (FindLiveObjects: 0.848900 ms CreateObjectMapping: 0.222400 ms MarkObjects: 7.316600 ms  DeleteObjects: 0.048600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007783 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.16 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.986 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.4 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4733.
+Total: 8.559300 ms (FindLiveObjects: 0.762800 ms CreateObjectMapping: 0.238100 ms MarkObjects: 7.484900 ms  DeleteObjects: 0.071800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009256 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.911 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.4 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4736.
+Total: 8.898300 ms (FindLiveObjects: 0.829700 ms CreateObjectMapping: 0.213600 ms MarkObjects: 7.803700 ms  DeleteObjects: 0.049100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009463 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.944 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 178.1 MB.
+System memory in use after: 178.4 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4739.
+Total: 9.177200 ms (FindLiveObjects: 0.768600 ms CreateObjectMapping: 0.249200 ms MarkObjects: 8.104600 ms  DeleteObjects: 0.052900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 88091.146419 seconds.
+  path: Assets/3D Tetris/Number Block Prefab.prefab
+  artifactKey: Guid(9b92d9ce9f0644f448470aa291a21542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/3D Tetris/Number Block Prefab.prefab using Guid(9b92d9ce9f0644f448470aa291a21542) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c53e9e953bfbdab40764c97ce4ce9278') in 0.366068 seconds
+  Import took 0.386188 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008994 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.075 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 181.1 MB.
+System memory in use after: 181.4 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4751.
+Total: 9.179400 ms (FindLiveObjects: 0.894800 ms CreateObjectMapping: 0.267000 ms MarkObjects: 7.955500 ms  DeleteObjects: 0.060200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008522 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.917 seconds
+Platform modules already initialized, skipping
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 2.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3916 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 181.1 MB.
+System memory in use after: 181.4 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 4754.
+Total: 8.118700 ms (FindLiveObjects: 0.850700 ms CreateObjectMapping: 0.246900 ms MarkObjects: 6.977200 ms  DeleteObjects: 0.042200 ms)
+

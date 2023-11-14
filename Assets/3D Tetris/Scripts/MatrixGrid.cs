@@ -197,7 +197,10 @@ public class MatrixGrid : MonoBehaviour
                 }
             }
 
-            //Debug.Log(" IsPointValueReachedVertical: Cur: "+ CurrentTotal+" req:"+ ( PTotal-CurrentTotal));
+        //Debug.Log(" IsPointValueReachedVertical: Cur: "+ CurrentTotal+" req:"+ ( PTotal-CurrentTotal));
+
+        Debug.Log("Vertical Total: " + CurrentTotal);
+
 
         if (CurrentTotal == PTotal)
         {
@@ -366,15 +369,15 @@ public class MatrixGrid : MonoBehaviour
         }
     }
 
+
     public static bool CheckAllDirectionTargetReach(int indexX, int indexY)
     {
-        //whatever the point value is of the current block
         int currentBlocksPointValue = grid[indexX, indexY].parent.GetComponent<BlockObject>().PointValue;
 
         bool isBonusCube = currentBlocksPointValue > 10;
 
-        //if the current block is NOT a bonus cube
-        if (isBonusCube == false)
+        // If the current block is NOT a bonus cube
+        if (!isBonusCube)
         {
             bool verticalCheck = IsPointValueReachedVertical(indexX);
 
@@ -384,136 +387,53 @@ public class MatrixGrid : MonoBehaviour
 
             bool leftDiagonalCheck = IsPointValueReachedLeftDiagonal(indexX, indexY);
 
-            if (verticalCheck)
+            if (verticalCheck || horizontalCheck || rightDiagonalCheck || leftDiagonalCheck)
             {
-                //DeleteWholeColumns(indexX);
+                // Bonus cube checks if any of the regular conditions are met
+                if (currentBlocksPointValue == 10)
+                {
+                    DeleteWholeColumns(indexX);
+                }
+                else if (currentBlocksPointValue == 11)
+                {
+                    DeleteWholeRow(indexY);
+                }
+                else if (currentBlocksPointValue == 12)
+                {
+                    DeleteWholeRow(indexY);
+                    DeleteWholeColumns(indexX);
+                }
+
+                return true;
             }
 
-            if (horizontalCheck)
-            {
-                //DeleteSelectedObject(horizontalBlockObjects);
-            }
-
-            if (rightDiagonalCheck)
-            {
-                //DeleteSelectedObject(rightDiagonalBlockObjects);
-            }
-
-            if (leftDiagonalCheck)
-            {
-                //DeleteSelectedObject(leftDiagonalBlockObjects);
-            }
-
-            return verticalCheck || horizontalCheck || rightDiagonalCheck || leftDiagonalCheck;
-
+            return false;
         }
-        else if (currentBlocksPointValue == 10)
-        {
-            //Delete Vertical
-            //DeleteWholeColumns(indexX);
 
-            return true;
+        // Bonus cube checks
+        if (currentBlocksPointValue == 10)
+        {
+            DeleteWholeColumns(indexX);
         }
         else if (currentBlocksPointValue == 11)
         {
-            //Delete Horizontal
-            //DeleteWholeRow(indexY);
-
-            return true;
+            DeleteWholeRow(indexY);
         }
         else if (currentBlocksPointValue == 12)
         {
-            //Delete Diagonals
-            //DeleteWholeRow(indexY);
-            //DeleteWholeColumns(indexX);
-
-            return true;
+            DeleteWholeRow(indexY);
+            DeleteWholeColumns(indexX);
         }
 
-        return false;
+        return true;
     }
-
-    #region Deprecate Soon
-
-    /*
-    public static bool CheckAllDirectionTargetReach(int indexX, int indexY)
-    {
-        if (grid[indexX, indexY] != null)
-        {
-            //whatever the point value is of the current block
-            int currentBlocksPointValue = grid[indexX, indexY].parent.GetComponent<BlockObject>().Point;
-
-            bool isBonusCube = currentBlocksPointValue > 10;
-
-            //if the current block is NOT a bonus cube
-            if (isBonusCube == false)
-            {
-                bool verticalCheck = IsPointValueReachedVertical(indexX);
-
-                bool horizontalCheck = IsPointValueReachedHorizontal(indexX, indexY);
-
-                bool rightDiagonalCheck = IsPointValueReachedRightDiagonal(indexX, indexY);
-
-                bool leftDiagonalCheck = IsPointValueReachedLeftDiagonal(indexX, indexY);
-
-                if (verticalCheck)
-                {
-                    //DeleteWholeColumns(indexX);
-                }
-
-                if (horizontalCheck)
-                {
-                    //DeleteSelectedObject(horizontalBlockObjects);
-                }
-
-                if (rightDiagonalCheck)
-                {
-                    //DeleteSelectedObject(rightDiagonalBlockObjects);
-                }
-
-                if (leftDiagonalCheck)
-                {
-                    //DeleteSelectedObject(leftDiagonalBlockObjects);
-                }
-
-                return verticalCheck || horizontalCheck || rightDiagonalCheck || leftDiagonalCheck;
-
-            }
-            else if (currentBlocksPointValue == 10)
-            {
-                //Delete Vertical
-                //DeleteWholeColumns(indexX);
-
-                return true;
-            }
-            else if (currentBlocksPointValue == 11)
-            {
-                //Delete Horizontal
-                //DeleteWholeRow(indexY);
-
-                return true;
-            }
-            else if (currentBlocksPointValue == 12)
-            {
-                //Delete Diagonals
-                //DeleteWholeRow(indexY);
-                //DeleteWholeColumns(indexX);
-
-                return true;
-            }
-        }
-
-        return false;
-    }
-    */
-
-    #endregion
 
 
     public static void DeleteSelectedObject(List<Vector2> objects)
-    {     
+    {
+        Debug.Log("Horiz Check");
 
-        if(!isSuperBlock)
+        if (!isSuperBlock)
         {
             Scoremanager scoremanager = FindObjectOfType<Scoremanager>();
 
@@ -528,6 +448,9 @@ public class MatrixGrid : MonoBehaviour
 
     public static void DeleteWholeColumns(int x)
     {
+
+        Debug.Log("Vertical Check");
+
         DestroyBlockAudio("2,0,false");
 
         if (!isSuperBlock)

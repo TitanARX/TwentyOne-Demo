@@ -3042,3 +3042,530 @@ Received Import Request.
 Start importing Assets/00_Project Resources/Scripts/GenerateRandomValue.cs using Guid(166b0fe97b81d35418bb950bc0a13903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6927683c07920a27b120efb83cd2426') in 0.009793 seconds
   Import took 0.039810 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 5926.746825 seconds.
+  path: Assets/00_Project Resources/Scripts/GenerateRandomValue.cs
+  artifactKey: Guid(166b0fe97b81d35418bb950bc0a13903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/00_Project Resources/Scripts/GenerateRandomValue.cs using Guid(166b0fe97b81d35418bb950bc0a13903) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7107d6c836379cdad815a947dd7a8f9b') in 0.009336 seconds
+  Import took 0.173236 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.047161 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.418 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5040.
+Total: 11.572800 ms (FindLiveObjects: 0.960800 ms CreateObjectMapping: 0.270700 ms MarkObjects: 8.219700 ms  DeleteObjects: 2.119300 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008585 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.923 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.25 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5043.
+Total: 8.582800 ms (FindLiveObjects: 0.876100 ms CreateObjectMapping: 0.256100 ms MarkObjects: 7.399800 ms  DeleteObjects: 0.049100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008545 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.22 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.926 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 3.26 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.2 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5046.
+Total: 13.437500 ms (FindLiveObjects: 1.162100 ms CreateObjectMapping: 0.341400 ms MarkObjects: 11.849700 ms  DeleteObjects: 0.081600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008817 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.880 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5049.
+Total: 8.762900 ms (FindLiveObjects: 0.845300 ms CreateObjectMapping: 0.263000 ms MarkObjects: 7.603100 ms  DeleteObjects: 0.049800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008661 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.063 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.36 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5052.
+Total: 11.325400 ms (FindLiveObjects: 1.338600 ms CreateObjectMapping: 0.506500 ms MarkObjects: 9.428200 ms  DeleteObjects: 0.049000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008834 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.068 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5055.
+Total: 11.158000 ms (FindLiveObjects: 1.149600 ms CreateObjectMapping: 0.339100 ms MarkObjects: 9.611000 ms  DeleteObjects: 0.055600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009213 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.013 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5058.
+Total: 8.673000 ms (FindLiveObjects: 0.935700 ms CreateObjectMapping: 0.217200 ms MarkObjects: 7.473100 ms  DeleteObjects: 0.045400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008064 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.937 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.29 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5061.
+Total: 8.986300 ms (FindLiveObjects: 0.823800 ms CreateObjectMapping: 0.229600 ms MarkObjects: 7.884700 ms  DeleteObjects: 0.046200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008806 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.846 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5064.
+Total: 8.579700 ms (FindLiveObjects: 0.872400 ms CreateObjectMapping: 0.237300 ms MarkObjects: 7.412800 ms  DeleteObjects: 0.053900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009096 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.82 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.837 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5067.
+Total: 8.616900 ms (FindLiveObjects: 0.923400 ms CreateObjectMapping: 0.260800 ms MarkObjects: 7.371000 ms  DeleteObjects: 0.059200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008299 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.011 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.31 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5070.
+Total: 8.891700 ms (FindLiveObjects: 0.959800 ms CreateObjectMapping: 0.282300 ms MarkObjects: 7.575300 ms  DeleteObjects: 0.072100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.017621 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.32 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.114 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5073.
+Total: 10.548800 ms (FindLiveObjects: 0.877100 ms CreateObjectMapping: 0.230400 ms MarkObjects: 9.385200 ms  DeleteObjects: 0.053600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008874 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.933 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5076.
+Total: 8.600000 ms (FindLiveObjects: 0.796400 ms CreateObjectMapping: 0.211600 ms MarkObjects: 7.540400 ms  DeleteObjects: 0.050200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009311 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.32 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.085 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Shader 'TLG/ShieldShader': fallback shader 'Particles/Additive' not found
+Shader 'TLG/ShieldShader-UI': fallback shader 'Particles/Additive' not found
+Refreshing native plugins compatible for Editor in 2.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3892 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 186.0 MB.
+System memory in use after: 186.3 MB.
+
+Unloading 48 unused Assets to reduce memory usage. Loaded Objects now: 5079.
+Total: 9.307300 ms (FindLiveObjects: 0.950100 ms CreateObjectMapping: 0.546400 ms MarkObjects: 7.753200 ms  DeleteObjects: 0.055300 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 25460.749959 seconds.
+  path: Assets/Scenes/MainMenuSettings.lighting
+  artifactKey: Guid(2e748adcdecbfb841a68e8dc28b502d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenuSettings.lighting using Guid(2e748adcdecbfb841a68e8dc28b502d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69c6fc6c521d41267997cf641dca7b1e') in 0.051696 seconds
+  Import took 0.071474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002908 seconds.
+  path: Assets/Scenes/MainMenuSettings.lighting
+  artifactKey: Guid(2e748adcdecbfb841a68e8dc28b502d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/MainMenuSettings.lighting using Guid(2e748adcdecbfb841a68e8dc28b502d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69c6fc6c521d41267997cf641dca7b1e') in 0.005013 seconds
+  Import took 0.016924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 172.477080 seconds.
+  path: Assets/Scenes/Gameplay.unity
+  artifactKey: Guid(204bba36f73e1514082f813596d9baab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Gameplay.unity using Guid(204bba36f73e1514082f813596d9baab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7886470602c19fa0a89102929cd9a1c7') in 0.023921 seconds
+  Import took 0.033883 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009323 seconds.
+Callback registration failed. Increase kMaxCallback.
+
+Fatal Error! Callback registration failed. Increase kMaxCallback.
+
+Crash!!!
+SymInit: Symbol-SearchPath: 'C:/Program Files/Unity/Hub/Editor/2020.3.6f1/Editor/Data/Mono;.;G:\Unity\TwentyOne-Demo;C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor;C:\Windows;C:\Windows\system32;SRV*C:\websymbols*http://msdl.microsoft.com/download/symbols;', symOptions: 534, UserName: 'Zues III'
+OS-Version: 10.0.0
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\Unity.exe:Unity.exe (00007FF620D20000), size: 134828032 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2020.3.6.35766
+C:\Windows\SYSTEM32\ntdll.dll:ntdll.dll (00007FF841950000), size: 2060288 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\KERNEL32.DLL:KERNEL32.DLL (00007FF840F70000), size: 774144 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\KERNELBASE.dll:KERNELBASE.dll (00007FF83F320000), size: 3104768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\CRYPT32.dll:CRYPT32.dll (00007FF83F690000), size: 1429504 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\ucrtbase.dll:ucrtbase.dll (00007FF83F7F0000), size: 1048576 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\USER32.dll:USER32.dll (00007FF83FEB0000), size: 1695744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\win32u.dll:win32u.dll (00007FF83F240000), size: 139264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\GDI32.dll:GDI32.dll (00007FF8415E0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\gdi32full.dll:gdi32full.dll (00007FF83F120000), size: 1155072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\msvcp_win.dll:msvcp_win.dll (00007FF83F030000), size: 643072 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\ADVAPI32.dll:ADVAPI32.dll (00007FF840810000), size: 712704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\msvcrt.dll:msvcrt.dll (00007FF841870000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.3570
+C:\Windows\System32\sechost.dll:sechost.dll (00007FF8408C0000), size: 638976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\RPCRT4.dll:RPCRT4.dll (00007FF841740000), size: 1204224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\libfbxsdk.dll:libfbxsdk.dll (00007FFFEF940000), size: 8974336 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2020.0.0.0
+C:\Windows\System32\SHELL32.dll:SHELL32.dll (00007FF8400C0000), size: 7618560 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\SHLWAPI.dll:SHLWAPI.dll (00007FF83FDA0000), size: 348160 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\ole32.dll:ole32.dll (00007FF841610000), size: 1224704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\OpenImageDenoise.dll:OpenImageDenoise.dll (00007FFFD5360000), size: 43806720 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\combase.dll:combase.dll (00007FF841200000), size: 3489792 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\IMM32.dll:IMM32.dll (00007FF841030000), size: 196608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\SETUPAPI.dll:SETUPAPI.dll (00007FF840B00000), size: 4644864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\cfgmgr32.dll:cfgmgr32.dll (00007FF83F0D0000), size: 319488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\umbraoptimizer64.dll:umbraoptimizer64.dll (00007FFFF8630000), size: 1306624 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\WS2_32.dll:WS2_32.dll (00007FF83FC10000), size: 438272 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\WLDAP32.dll:WLDAP32.dll (00007FF841060000), size: 352256 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\Normaliz.dll:Normaliz.dll (00007FF8411F0000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\bcrypt.dll:bcrypt.dll (00007FF83F8F0000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\FreeImage.dll:FreeImage.dll (0000000180000000), size: 6414336 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.18.0.0
+C:\Windows\System32\OLEAUT32.dll:OLEAUT32.dll (00007FF841120000), size: 839680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\ispc_texcomp.dll:ispc_texcomp.dll (00007FFFF7CD0000), size: 1609728 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\WINTRUST.dll:WINTRUST.dll (00007FF83F620000), size: 421888 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\WinPixEventRuntime.dll:WinPixEventRuntime.dll (00007FF837F10000), size: 45056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.0.1812.6001
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\tbb.dll:tbb.dll (00007FF811560000), size: 413696 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2017.0.2016.1004
+C:\Windows\SYSTEM32\OPENGL32.dll:OPENGL32.dll (00007FFFF8C40000), size: 1200128 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\GLU32.dll:GLU32.dll (00007FF835AB0000), size: 180224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\IPHLPAPI.DLL:IPHLPAPI.DLL (00007FF83E3F0000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\VCRUNTIME140.dll:VCRUNTIME140.dll (00007FF8357F0000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.34.31931.0
+C:\Windows\SYSTEM32\WINHTTP.dll:WINHTTP.dll (00007FF8397D0000), size: 1089536 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\HID.DLL:HID.DLL (00007FF83D890000), size: 53248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\WINMM.dll:WINMM.dll (00007FF82F070000), size: 159744 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\RadeonImageFilters.dll:RadeonImageFilters.dll (00007FFFEF6D0000), size: 2535424 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.5.1.0
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\SketchUpAPI.dll:SketchUpAPI.dll (00007FFFE5510000), size: 8978432 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 19.0.753.0
+C:\Windows\SYSTEM32\VERSION.dll:VERSION.dll (00007FF839E40000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\optix.6.0.0.dll:optix.6.0.0.dll (00007FF835B10000), size: 208896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6.0.0.0
+C:\Windows\SYSTEM32\MSVCP140.dll:MSVCP140.dll (00007FF821CC0000), size: 581632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.34.31931.0
+C:\Windows\SYSTEM32\CRYPTBASE.DLL:CRYPTBASE.DLL (00007FF83E8F0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\MSVCP120.dll:MSVCP120.dll (00007FF806C70000), size: 679936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 12.0.40664.0
+C:\Windows\SYSTEM32\WSOCK32.dll:WSOCK32.dll (00007FF825F40000), size: 36864 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.1
+C:\Windows\SYSTEM32\MSVCR120.dll:MSVCR120.dll (00007FFFFCF00000), size: 978944 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 12.0.40664.0
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\SketchUpCommonPreferences.dll:SketchUpCommonPreferences.dll (00007FF81E2B0000), size: 483328 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 19.0.753.20342
+C:\Windows\SYSTEM32\Secur32.dll:Secur32.dll (00007FF8330B0000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\VCRUNTIME140_1.dll:VCRUNTIME140_1.dll (00007FF837E70000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 14.34.31931.0
+C:\Windows\SYSTEM32\SSPICLI.DLL:SSPICLI.DLL (00007FF83EEE0000), size: 204800 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\OpenRL.dll:OpenRL.dll (000001DF57160000), size: 12779520 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.5.0.2907
+C:\Windows\SYSTEM32\MSVCP100.dll:MSVCP100.dll (0000000051B00000), size: 622592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.40219.325
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\embree.dll:embree.dll (00007FFFD8E90000), size: 16711680 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.14.0.0
+C:\Windows\SYSTEM32\MSVCR100.dll:MSVCR100.dll (0000000051BA0000), size: 860160 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.40219.325
+C:\Windows\SYSTEM32\MSWSOCK.DLL:MSWSOCK.DLL (00007FF83E700000), size: 434176 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\OpenRL_pthread.dll:OpenRL_pthread.dll (000001DF57DB0000), size: 61440 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2.9.0.0
+C:\Windows\SYSTEM32\MSASN1.dll:MSASN1.dll (00007FF83EB90000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\kernel.appcore.dll:kernel.appcore.dll (00007FF83CE10000), size: 73728 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\bcryptPrimitives.dll:bcryptPrimitives.dll (00007FF83F920000), size: 532480 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\system32\uxtheme.dll:uxtheme.dll (00007FF83CA20000), size: 647168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\shcore.dll:shcore.dll (00007FF83F9B0000), size: 708608 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\windows.storage.dll:windows.storage.dll (00007FF83D0F0000), size: 7974912 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\Wldp.dll:Wldp.dll (00007FF83EA00000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\profapi.dll:profapi.dll (00007FF83EF60000), size: 151552 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\clbcatq.dll:clbcatq.dll (00007FF83FE00000), size: 692224 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 2001.12.10941.16384
+C:\Windows\System32\netprofm.dll:netprofm.dll (00007FF83C420000), size: 258048 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\npmproxy.dll:npmproxy.dll (00007FF838EA0000), size: 65536 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\NSI.dll:NSI.dll (00007FF840050000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\dhcpcsvc6.DLL:dhcpcsvc6.DLL (00007FF839BB0000), size: 94208 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\dhcpcsvc.DLL:dhcpcsvc.DLL (00007FF839F60000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\DNSAPI.dll:DNSAPI.dll (00007FF83E430000), size: 827392 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\fwpuclnt.dll:fwpuclnt.dll (00007FF834B60000), size: 532480 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\rasadhlp.dll:rasadhlp.dll (00007FF834B50000), size: 40960 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\d3d11.dll:d3d11.dll (00007FF83ADD0000), size: 2502656 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\dxgi.dll:dxgi.dll (00007FF83D8D0000), size: 995328 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\DriverStore\FileRepository\nv_dispig.inf_amd64_7e5fd280efaa5445\nvldumdx.dll:nvldumdx.dll (00007FF82CBF0000), size: 770048 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 31.0.15.3623
+C:\Windows\SYSTEM32\cryptnet.dll:cryptnet.dll (00007FF839770000), size: 200704 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\drvstore.dll:drvstore.dll (00007FF839430000), size: 1343488 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\devobj.dll:devobj.dll (00007FF83ED50000), size: 208896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\imagehlp.dll:imagehlp.dll (00007FF840AD0000), size: 118784 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\CRYPTSP.dll:CRYPTSP.dll (00007FF83E900000), size: 98304 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\system32\rsaenh.dll:rsaenh.dll (00007FF83E010000), size: 212992 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\DriverStore\FileRepository\nv_dispig.inf_amd64_7e5fd280efaa5445\nvwgf2umx.dll:nvwgf2umx.dll (00007FF826430000), size: 99463168 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 31.0.15.3623
+C:\Windows\System32\DriverStore\FileRepository\nv_dispig.inf_amd64_7e5fd280efaa5445\Display.NvContainer\MessageBus.dll:MessageBus.dll (00007FF81BE20000), size: 7565312 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 1.22.2758.1620
+C:\Windows\SYSTEM32\dxcore.dll:dxcore.dll (00007FF839B70000), size: 241664 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\system32\wbem\wbemprox.dll:wbemprox.dll (00007FF838670000), size: 69632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\wbemcomn.dll:wbemcomn.dll (00007FF8362B0000), size: 589824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\system32\wbem\wbemsvc.dll:wbemsvc.dll (00007FF835E90000), size: 81920 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\system32\wbem\fastprox.dll:fastprox.dll (00007FF835EB0000), size: 1093632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\amsi.dll:amsi.dll (00007FF835DC0000), size: 126976 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\USERENV.dll:USERENV.dll (00007FF83EF20000), size: 188416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.23100.2009-0\MpOav.dll:MpOav.dll (00007FFFD85E0000), size: 507904 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 4.18.23100.2009
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\cudart64_90.dll:cudart64_90.dll (00007FFFE9FA0000), size: 397312 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6.14.11.9000
+C:\Windows\SYSTEM32\opencl.dll:opencl.dll (00007FFFE9730000), size: 1490944 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.0.3.0
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\radeonrays.dll:radeonrays.dll (00007FFFE96A0000), size: 552960 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Program Files\Unity\Hub\Editor\2020.3.6f1\Editor\Data\MonoBleedingEdge\EmbedRuntime\mono-2.0-bdwgc.dll:mono-2.0-bdwgc.dll (00007FFFD7DF0000), size: 7790592 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\PSAPI.DLL:PSAPI.DLL (00007FF840AF0000), size: 32768 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\ProgramData\Microsoft\VisualStudio\Setup\x64\Microsoft.VisualStudio.Setup.Configuration.Native.dll:Microsoft.VisualStudio.Setup.Configuration.Native.dll (00007FFFE6390000), size: 1007616 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 3.7.2174.19405
+C:\Windows\SYSTEM32\PROPSYS.dll:PROPSYS.dll (00007FF838430000), size: 1007616 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 7.0.19041.3570
+C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.3570_none_60bb2a3971f3e41a\comctl32.dll:comctl32.dll (00007FF82F180000), size: 2727936 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 6.10.19041.3570
+C:\Windows\SYSTEM32\WindowsCodecs.dll:WindowsCodecs.dll (00007FF83C810000), size: 1785856 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\thumbcache.dll:thumbcache.dll (00007FF8076B0000), size: 417792 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\MrmCoreR.dll:MrmCoreR.dll (00007FF830830000), size: 999424 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\iertutil.dll:iertutil.dll (00007FF831160000), size: 2867200 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 11.0.19041.3570
+C:\Windows\SYSTEM32\windows.staterepositorycore.dll:windows.staterepositorycore.dll (00007FF830040000), size: 69632 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\bcp47mrm.dll:bcp47mrm.dll (00007FF82F040000), size: 184320 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\Windows.UI.dll:Windows.UI.dll (00007FF82FC90000), size: 1314816 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\WindowManagementAPI.dll:WindowManagementAPI.dll (00007FF830C60000), size: 659456 (result: 0), SymType: '-deferred-', PDB: ''
+C:\Windows\System32\TextInputFramework.dll:TextInputFramework.dll (00007FF82F6A0000), size: 1024000 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\InputHost.dll:InputHost.dll (00007FF82F540000), size: 1384448 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\twinapi.appcore.dll:twinapi.appcore.dll (00007FF830930000), size: 2125824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\wintypes.dll:wintypes.dll (00007FF83B4C0000), size: 1396736 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\CoreMessaging.dll:CoreMessaging.dll (00007FF83C280000), size: 991232 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\CoreUIComponents.dll:CoreUIComponents.dll (00007FF83BE20000), size: 3518464 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\ntmarta.dll:ntmarta.dll (00007FF83E130000), size: 208896 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.19041.3570_none_91a61d1ecc865de8\gdiplus.dll:gdiplus.dll (00007FF825D70000), size: 1724416 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\MSCTF.dll:MSCTF.dll (00007FF83FC80000), size: 1130496 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\edputil.dll:edputil.dll (00007FF81A660000), size: 147456 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\Windows.StateRepositoryPS.dll:Windows.StateRepositoryPS.dll (00007FF8249D0000), size: 1335296 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\wkscli.dll:wkscli.dll (00007FF83E170000), size: 110592 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\netutils.dll:netutils.dll (00007FF83E500000), size: 49152 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\provsvc.dll:provsvc.dll (00007FF81FD70000), size: 512000 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\windows.fileexplorer.common.dll:windows.fileexplorer.common.dll (00007FF81A5C0000), size: 397312 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\cldapi.dll:cldapi.dll (00007FF81A4D0000), size: 139264 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\FLTLIB.DLL:FLTLIB.DLL (00007FF8241E0000), size: 45056 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\apphelp.dll:apphelp.dll (00007FF83C4A0000), size: 589824 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\System32\OneCoreUAPCommonProxyStub.dll:OneCoreUAPCommonProxyStub.dll (00007FF830060000), size: 8187904 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\policymanager.dll:policymanager.dll (00007FF839FF0000), size: 659456 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\msvcp110_win.dll:msvcp110_win.dll (00007FF83E0A0000), size: 565248 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+C:\Windows\SYSTEM32\dbghelp.dll:dbghelp.dll (00007FF838870000), size: 1982464 (result: 0), SymType: '-deferred-', PDB: '', fileVersion: 10.0.19041.3570
+
+========== OUTPUTTING STACK TRACE ==================
+
+0x00007FF83F34CF19 (KERNELBASE) RaiseException
+0x00007FF62344B19D (Unity) EditorMonoConsole::LogToConsoleImplementation
+0x00007FF62344C0EA (Unity) EditorMonoConsole::LogToConsoleImplementation
+0x00007FF62500E1FE (Unity) DebugStringToFilePostprocessedStacktrace
+0x00007FF62500D7AF (Unity) DebugStringToFile
+0x00007FF620F83DC3 (Unity) CallbackArraySubBase<void (__cdecl*)(MemoryManager::AllocationLogDetails const & __ptr64)>::Register
+0x00007FF623C1CD49 (Unity) LoadDomainAndUserAssemblies
+0x00007FF623C1D1FE (Unity) LoadUserAssemblies
+0x00007FF624052308 (Unity) <lambda_79a3ebc38cb5166d44d10a16a21fca24>::operator()
+0x00007FF62411D662 (Unity) asio::detail::completion_handler<core::mutable_function<void __cdecl(void)> >::do_complete
+0x00007FF62411F7C0 (Unity) asio::detail::win_iocp_io_service::do_one
+0x00007FF624122F4E (Unity) asio::io_service::run
+0x00007FF624098FD0 (Unity) RunAssetImportWorkerClientV2
+0x00007FF624099020 (Unity) RunAssetImporterV2
+0x00007FF6235A4266 (Unity) Application::InitializeProject
+0x00007FF623F24BB2 (Unity) WinMain
+0x00007FF625DA2A36 (Unity) __scrt_common_main_seh
+0x00007FF840F87344 (KERNEL32) BaseThreadInitThunk
+0x00007FF8419A26B1 (ntdll) RtlUserThreadStart
+
+========== END OF STACKTRACE ===========
+
+A crash has been intercepted by the crash handler. For call stack and other details, see the latest crash report generated in:
+ * C:/Users/ZUESII~1/AppData/Local/Temp/Unity/Editor/Crashes
