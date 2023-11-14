@@ -33,8 +33,12 @@ public class BlockSpawner : MonoBehaviour
         _state = SpawnerState.Ready;
     }
 
-    public void SubscribeToCheck(object sender, BlockSettleArgs args)
+    public void EvaluateGridValues(object sender, BlockSettleArgs args)
     {
+        Debug.Log("Previous Block Settled. Send Signal to Grid Matrix to check if there are any matches found.");
+
+        _state = SpawnerState.Ready;
+
         SpawnBlock((int)args.Pos.y);
     }
 
@@ -94,15 +98,17 @@ public class BlockSpawner : MonoBehaviour
                 if (!blockObj)
                     return;
 
-                blockObj.OnSpawnBlock += OnSpawnSignal;
+                //blockObj.OnSpawnBlock += OnSpawnSignal;
 
                 // Subscribe The Current Blocks Settled Event to Spawn the Next Cube After Checks are made 
-                blockObj.OnSettle += SubscribeToCheck;
+                blockObj.OnSettle += EvaluateGridValues;
+
+                //blockObj.OnSettle += matrixGrid.OnBlockSettle;
 
                 MatrixGrid.currentBlock = blockObj;
 
                 // Comment this line to allow the spawner to stay paused after spawning
-                // _state = SpawnerState.Paused;
+               _state = SpawnerState.Paused;
             }
             else
             {
@@ -122,7 +128,6 @@ public class BlockSpawner : MonoBehaviour
             }
         }
     }
-
 
 
 

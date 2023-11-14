@@ -23,7 +23,7 @@ public class JukeboxController : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
 
-        currentTrackIndex =  15;
+        currentTrackIndex =  0;
 
         if (audioSource == null)
         {

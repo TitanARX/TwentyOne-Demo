@@ -20,6 +20,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "QuickDrop",
+                    "type": "Button",
+                    "id": "16d699b5-17bc-466c-9e17-1c7c3e7e7d21",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "QuickHold",
+                    "type": "Button",
+                    "id": "5098e6ad-d40a-4a33-b4f4-abea95dbb8be",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -130,6 +146,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Input",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "772168c8-6eab-4fe7-b6ec-ac157940a1e8",
+                    "path": "<HID::Sony Interactive Entertainment DualSense Wireless Controller>/hat/down",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "QuickDrop",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "00d153d5-59dd-490e-bb5b-c8b7fecc97c9",
+                    "path": "<HID::Sony Interactive Entertainment DualSense Wireless Controller>/button2",
+                    "interactions": "Hold",
+                    "processors": "",
+                    "groups": "",
+                    "action": "QuickHold",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

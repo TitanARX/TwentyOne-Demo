@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: MainMenuBGM
   m_EditorClassIdentifier: 
   AudioClips:
-  - {fileID: 8300000, guid: a3bb13ffde7bc7f47aaf2dc0bcef52dd, type: 3}
+  - {fileID: 8300000, guid: d1ec39d7dc703b94290411a9275f9121, type: 3}
   mixerGroup: {fileID: 577834846468379105, guid: 48b18132bfe2d8c42a76c8fbe4f35205,
     type: 2}

@@ -1,4 +1,4 @@
-// GENERATED AUTOMATICALLY FROM 'Assets/_Data/UniversalControls.inputactions'
+// GENERATED AUTOMATICALLY FROM 'Assets/00_Project Resources/UniversalControls.inputactions'
 
 using System;
 using System.Collections;
@@ -30,6 +30,22 @@ public class @UniversalControls : IInputActionCollection, IDisposable
                     ""name"": ""Input"",
                     ""type"": ""Button"",
                     ""id"": ""a6ec2d54-a3f0-44f9-80f7-b130ce812860"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""QuickDrop"",
+                    ""type"": ""Button"",
+                    ""id"": ""16d699b5-17bc-466c-9e17-1c7c3e7e7d21"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""QuickHold"",
+                    ""type"": ""Button"",
+                    ""id"": ""5098e6ad-d40a-4a33-b4f4-abea95dbb8be"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -145,6 +161,28 @@ public class @UniversalControls : IInputActionCollection, IDisposable
                     ""action"": ""Input"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""772168c8-6eab-4fe7-b6ec-ac157940a1e8"",
+                    ""path"": ""<HID::Sony Interactive Entertainment DualSense Wireless Controller>/hat/down"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""QuickDrop"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""00d153d5-59dd-490e-bb5b-c8b7fecc97c9"",
+                    ""path"": ""<HID::Sony Interactive Entertainment DualSense Wireless Controller>/button2"",
+                    ""interactions"": ""Hold"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""QuickHold"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -239,6 +277,8 @@ public class @UniversalControls : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Input = m_Player.FindAction("Input", throwIfNotFound: true);
+        m_Player_QuickDrop = m_Player.FindAction("QuickDrop", throwIfNotFound: true);
+        m_Player_QuickHold = m_Player.FindAction("QuickHold", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Pause = m_UI.FindAction("Pause", throwIfNotFound: true);
@@ -297,12 +337,16 @@ public class @UniversalControls : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Input;
+    private readonly InputAction m_Player_QuickDrop;
+    private readonly InputAction m_Player_QuickHold;
     public struct PlayerActions
     {
         private @UniversalControls m_Wrapper;
         public PlayerActions(@UniversalControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Input => m_Wrapper.m_Player_Input;
+        public InputAction @QuickDrop => m_Wrapper.m_Player_QuickDrop;
+        public InputAction @QuickHold => m_Wrapper.m_Player_QuickHold;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -318,6 +362,12 @@ public class @UniversalControls : IInputActionCollection, IDisposable
                 @Input.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInput;
                 @Input.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInput;
                 @Input.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInput;
+                @QuickDrop.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnQuickDrop;
+                @QuickDrop.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnQuickDrop;
+                @QuickDrop.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnQuickDrop;
+                @QuickHold.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnQuickHold;
+                @QuickHold.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnQuickHold;
+                @QuickHold.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnQuickHold;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -328,6 +378,12 @@ public class @UniversalControls : IInputActionCollection, IDisposable
                 @Input.started += instance.OnInput;
                 @Input.performed += instance.OnInput;
                 @Input.canceled += instance.OnInput;
+                @QuickDrop.started += instance.OnQuickDrop;
+                @QuickDrop.performed += instance.OnQuickDrop;
+                @QuickDrop.canceled += instance.OnQuickDrop;
+                @QuickHold.started += instance.OnQuickHold;
+                @QuickHold.performed += instance.OnQuickHold;
+                @QuickHold.canceled += instance.OnQuickHold;
             }
         }
     }
@@ -410,6 +466,8 @@ public class @UniversalControls : IInputActionCollection, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnInput(InputAction.CallbackContext context);
+        void OnQuickDrop(InputAction.CallbackContext context);
+        void OnQuickHold(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

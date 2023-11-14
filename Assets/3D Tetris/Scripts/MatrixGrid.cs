@@ -565,7 +565,25 @@ public class MatrixGrid : MonoBehaviour
         }
     }
 
+    public void OnBlockSettle(object sender, BlockSettleArgs args)
+    {
+        UpdateGridAfterSettle(args);
+    }
 
+    private void UpdateGridAfterSettle(BlockSettleArgs args)
+    {
+        // Update grid positions based on the settled block
+        // ...
+
+        // Check for matches, delete rows/columns, etc.
+        // ...
+
+        // Example:
+        int x = (int)args.Pos.x;
+        int y = (int)args.Pos.y;
+        DeleteRow(y);
+        DeleteColumn(x);
+    }
 
 }
 
