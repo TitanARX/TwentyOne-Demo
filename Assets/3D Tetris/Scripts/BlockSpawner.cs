@@ -77,7 +77,6 @@ public class BlockSpawner : MonoBehaviour
     {
         if (_state == SpawnerState.Initializing || _state == SpawnerState.Stopped || _state == SpawnerState.Paused)
         {
-            Debug.Log("Spawner Not Ready");
             return;
         }
         else

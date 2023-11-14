@@ -374,65 +374,49 @@ public class MatrixGrid : MonoBehaviour
     {
         int currentBlocksPointValue = grid[indexX, indexY].parent.GetComponent<BlockObject>().PointValue;
 
-        bool isBonusCube = currentBlocksPointValue > 10;
+        bool isBonusCube = currentBlocksPointValue >= 10;
 
-        // If the current block is NOT a bonus cube
-        if (!isBonusCube)
+        // If the current block is a bonus cube, handle it separately
+        if (isBonusCube)
         {
-            bool verticalCheck = IsPointValueReachedVertical(indexX);
-
-            bool horizontalCheck = IsPointValueReachedHorizontal(indexX, indexY);
-
-            bool rightDiagonalCheck = IsPointValueReachedRightDiagonal(indexX, indexY);
-
-            bool leftDiagonalCheck = IsPointValueReachedLeftDiagonal(indexX, indexY);
-
-            if (verticalCheck || horizontalCheck || rightDiagonalCheck || leftDiagonalCheck)
+            if (currentBlocksPointValue == 10)
             {
-                // Bonus cube checks if any of the regular conditions are met
-                if (currentBlocksPointValue == 10)
-                {
-                    DeleteWholeColumns(indexX);
-                }
-                else if (currentBlocksPointValue == 11)
-                {
-                    DeleteWholeRow(indexY);
-                }
-                else if (currentBlocksPointValue == 12)
-                {
-                    DeleteWholeRow(indexY);
-                    DeleteWholeColumns(indexX);
-                }
-
-                return true;
+                DeleteWholeColumns(indexX);
+            }
+            else if (currentBlocksPointValue == 11)
+            {
+                DeleteWholeRow(indexY);
+            }
+            else if (currentBlocksPointValue == 12)
+            {
+                DeleteWholeRow(indexY);
+                DeleteWholeColumns(indexX);
             }
 
-            return false;
+            return true;
         }
 
-        // Bonus cube checks
-        if (currentBlocksPointValue == 10)
+        // Regular cube checks
+        bool verticalCheck = IsPointValueReachedVertical(indexX);
+        bool horizontalCheck = IsPointValueReachedHorizontal(indexX, indexY);
+        bool rightDiagonalCheck = IsPointValueReachedRightDiagonal(indexX, indexY);
+        bool leftDiagonalCheck = IsPointValueReachedLeftDiagonal(indexX, indexY);
+
+        if (verticalCheck || horizontalCheck || rightDiagonalCheck || leftDiagonalCheck)
         {
-            DeleteWholeColumns(indexX);
-        }
-        else if (currentBlocksPointValue == 11)
-        {
-            DeleteWholeRow(indexY);
-        }
-        else if (currentBlocksPointValue == 12)
-        {
-            DeleteWholeRow(indexY);
-            DeleteWholeColumns(indexX);
+            // Here you can add code to destroy the blocks or handle other logic
+            // Example: DeleteSelectedObject(objects);
+            return true;
         }
 
-        return true;
+        return false;
     }
+
+
 
 
     public static void DeleteSelectedObject(List<Vector2> objects)
     {
-        Debug.Log("Horiz Check");
-
         if (!isSuperBlock)
         {
             Scoremanager scoremanager = FindObjectOfType<Scoremanager>();
@@ -448,9 +432,6 @@ public class MatrixGrid : MonoBehaviour
 
     public static void DeleteWholeColumns(int x)
     {
-
-        Debug.Log("Vertical Check");
-
         DestroyBlockAudio("2,0,false");
 
         if (!isSuperBlock)
