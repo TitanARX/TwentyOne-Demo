@@ -104,6 +104,6 @@ public abstract class SolverBase : MonoBehaviour, ISolve
 
     public virtual void UpdateGrid()
     {
-        SolverModel.Grid.UpdateAvailableGridPositions();
+        //SolverModel.Grid.UpdateAvailableGridPositions();
     }
 }

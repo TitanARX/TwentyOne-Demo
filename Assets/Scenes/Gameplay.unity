@@ -5119,6 +5119,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
         type: 3}
+      propertyPath: spawner
+      value: 
+      objectReference: {fileID: 1400098188}
+    - target: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
+        type: 3}
       propertyPath: PointTotal
       value: 21
       objectReference: {fileID: 0}
@@ -5313,4 +5318,4 @@ MonoBehaviour:
   lastValue: -1
   consecutiveCount: 0
   maxConsecutive: 2
-  superPowerPercentage: 5
+  superPowerPercentage: 0

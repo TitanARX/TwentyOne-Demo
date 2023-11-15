@@ -8,6 +8,9 @@ public class SpawnEventArgs : EventArgs{ }
 
 public class BlockSpawner : MonoBehaviour
 {
+    public delegate void SpawnBlockHandler(object sender, EventArgs args);
+    public static event SpawnBlockHandler SpawnBlockSignal;
+
     public SpawnerState _state = SpawnerState.Initializing;
 
     public GameObject BlockPrefab;
@@ -17,9 +20,6 @@ public class BlockSpawner : MonoBehaviour
     public IntVariable scoreVar;
 
     public GameObject menu;
-
-    public Solver _solver;
-
 
 
     private void Awake()
@@ -33,23 +33,23 @@ public class BlockSpawner : MonoBehaviour
         _state = SpawnerState.Ready;
     }
 
-    public void EvaluateGridValues(object sender, BlockSettleArgs args)
+    private void OnEnable()
     {
-        Debug.Log("Previous Block Settled. Send Signal to Grid Matrix to check if there are any matches found.");
-
-        _state = SpawnerState.Ready;
-
-        SpawnBlock((int)args.Pos.y);
+        SpawnBlockSignal += HandleSpawnBlockSignal;
     }
 
+    private void OnDisable()
+    {
+        SpawnBlockSignal -= HandleSpawnBlockSignal;
+    }
 
-    public void OnSpawnSignal(object sender, SpawnEventArgs args)
+    public void HandleSpawnBlockSignal(object sender, EventArgs args)
     {
         _state = SpawnerState.Ready;
 
+        // Implement your spawning logic here
         SpawnBlock(0);
     }
-
 
     bool IsValidGridPosition()
     {
@@ -101,7 +101,7 @@ public class BlockSpawner : MonoBehaviour
                 //blockObj.OnSpawnBlock += OnSpawnSignal;
 
                 // Subscribe The Current Blocks Settled Event to Spawn the Next Cube After Checks are made 
-                blockObj.OnSettle += EvaluateGridValues;
+                blockObj.OnSettle += MatrixGrid.Instance.HandleBlockSettled;
 
                 //blockObj.OnSettle += matrixGrid.OnBlockSettle;
 

@@ -7,11 +7,14 @@ public class BlockSettleArgs : EventArgs
 {
     public int Value;
     public Vector2 Pos;
+    public BlockObject block;
 
-    public BlockSettleArgs(int value, Vector2 pos)
+
+    public BlockSettleArgs(int value, Vector2 pos, BlockObject block)
     {
         this.Value = value;
         this.Pos = pos;
+        this.block = block;
     }
 }
 
@@ -96,7 +99,7 @@ public class BlockObject : MonoBehaviour
 
         originalFallSpeed = FallSpeed.value;
 
-        Debug.Log("Initial Fall Speed: " + originalFallSpeed);
+        //Debug.Log("Initial Fall Speed: " + originalFallSpeed);
 
     }
 
@@ -270,7 +273,7 @@ public class BlockObject : MonoBehaviour
 
             // Invoke the OnSettle event, notifying any listeners that the block has settled.
             // Pass the BlockSettleArgs with the block's point value and final position.
-            OnSettle?.Invoke(this, new BlockSettleArgs(PointValue, transform.position));
+            OnSettle?.Invoke(this, new BlockSettleArgs(PointValue, transform.position, this));
 
         }
 
