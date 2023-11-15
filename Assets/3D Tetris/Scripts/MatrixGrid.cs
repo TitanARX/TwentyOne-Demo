@@ -292,6 +292,7 @@ public class MatrixGrid : MonoBehaviour
 
                 // Decrease Rows after
                 DecreaseRowsAbove(x, y + 1);
+
             }
             else
             {
@@ -353,6 +354,8 @@ public class MatrixGrid : MonoBehaviour
                 grid[x, i - 1].position += new Vector3(0, -1, 0);
             }         
         }
+
+        CheckAllDirectionTargetReach(x, y - 1);
     }
 
     public enum Direction { Horizontal, Vertical }
