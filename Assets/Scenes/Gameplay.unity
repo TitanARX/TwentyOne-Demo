@@ -4770,7 +4770,7 @@ GameObject:
   - component: {fileID: 1988681763}
   - component: {fileID: 1988681762}
   m_Layer: 5
-  m_Name: Pause Menu (1)
+  m_Name: Game Over Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5144,6 +5144,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
         type: 3}
+      propertyPath: _gameOverScreen
+      value: 
+      objectReference: {fileID: 1988681761}
+    - target: {fileID: 2800370367549842860, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
+        type: 3}
       propertyPath: explosionPrefab
       value: 
       objectReference: {fileID: 1404468135700548, guid: ad4d25dd5bc079a40935b7c244b992da,
@@ -5318,4 +5323,4 @@ MonoBehaviour:
   lastValue: -1
   consecutiveCount: 0
   maxConsecutive: 2
-  superPowerPercentage: 0
+  superPowerPercentage: 1

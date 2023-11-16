@@ -40,6 +40,7 @@ public class MatrixGrid : MonoBehaviour
     }
     #endregion
 
+    #region Variables
 
     [SerializeField]
     [Header("Gameplay Board Size")]
@@ -84,6 +85,12 @@ public class MatrixGrid : MonoBehaviour
 
     public BlockSpawner spawner;
 
+    public GameObject _gameOverScreen;
+
+    #endregion
+
+    #region Setup
+
     private void Awake()
     {
         // Ensure there's only one instance
@@ -97,12 +104,12 @@ public class MatrixGrid : MonoBehaviour
             Destroy(gameObject); // Destroy duplicate instances
         }
 
-
         heightRows = Height;
         widthColumns = Width;
 
         PTotal = PointTotal;
-        
+
+        // Initialize the grid array
         grid = new Transform[Width, Height];
 
         SetCameraFX = new CameraFX(Camera.main);
@@ -112,11 +119,51 @@ public class MatrixGrid : MonoBehaviour
         customAudio = FindObjectOfType<CustomAudioManager>();
 
         scoremanager = FindObjectOfType<Scoremanager>();
+
+        _gameOverScreen.SetActive(false);
+
     }
+
+    #endregion
+
+    #region Helper Methods
+    public static GameObject ReturnObjectAtGridPosition(Vector2 gridPosition)
+    {
+        Vector2 v = RoundVector(gridPosition);
+
+        if (!IsInsideBorder(v))
+            return null;
+
+        if (grid[(int)v.x, (int)v.y] != null)
+
+            return grid[(int)v.x, (int)v.y].parent.gameObject;
+
+        else
+
+            return null;
+    }
+
+    //round out position
+    public static Vector2 RoundVector(Vector2 v)
+    {
+        return new Vector2(Mathf.Round(v.x), Mathf.Round(v.y));
+    }
+
+    //is object within grid
+    public static bool IsInsideBorder(Vector2 pos)
+    {
+        return (int)pos.x >= 0 && (int)pos.x < widthColumns && (int)pos.y >= 0;
+    }
+
+
+    #endregion
+
+    #region Current Block Settled Response
 
     //Response From Cube Alerting Matrix it Has Settled
     public void HandleBlockSettled(object sender, BlockSettleArgs args)
     {
+        //Unsubscribe settled event from this block
         args.block.OnSettle -= HandleBlockSettled;
 
         StartCoroutine(HandleBlockSettledCoroutine(args));
@@ -125,21 +172,53 @@ public class MatrixGrid : MonoBehaviour
     //Begin Checking
     private IEnumerator HandleBlockSettledCoroutine(BlockSettleArgs args)
     {
-        // Perform necessary logic here
-        bool reachTarget = CheckAllDirectionTargetReach((int)args.Pos.x, (int)args.Pos.y);
+        bool groupsFound = true;
 
-        // Wait until CheckAllDirectionTargetReach is completed
-        while (reachTarget)
+        while (groupsFound)
         {
-            yield return null; // Wait for the next frame
+            groupsFound = CheckForGroupsOf21();
 
-            reachTarget = CheckAllDirectionTargetReach((int)args.Pos.x, (int)args.Pos.y);
+            // Check if the blocks have reached the top
+            if (CheckTopReached())
+            {
+                // Handle game over logic here
+                GameOver();
+                yield break; // Exit the coroutine
+            }
+
+            yield return null; // Wait for the next frame
         }
 
         // Signal back to the spawner
         spawner.HandleSpawnBlockSignal(this, EventArgs.Empty);
     }
 
+    private bool CheckForGroupsOf21()
+    {
+        bool groupFound = false;
+
+        // Iterate over all positions in the grid
+        for (int x = 0; x < widthColumns; x++)
+        {
+            for (int y = 0; y < heightRows; y++)
+            {
+                // Check for a group at the current position
+                if (CheckAllDirectionTargetReach(x, y))
+                {
+                    groupFound = true;
+
+                    // Update the grid and handle any additional logic
+                    //spawner.HandleSpawnBlockSignal(this, EventArgs.Empty);
+                }
+            }
+        }
+
+        return groupFound;
+    }
+
+    #endregion
+
+    #region Check for Solves
     public static bool CheckAllDirectionTargetReach(int indexX, int indexY)
     {
         if (grid[indexX, indexY] == null)
@@ -156,7 +235,7 @@ public class MatrixGrid : MonoBehaviour
 
         // Get the BlockObject component and check if it's null
         BlockObject blockObject = parentTransform.GetComponent<BlockObject>();
-        
+
         if (blockObject == null)
         {
             return false;
@@ -166,7 +245,7 @@ public class MatrixGrid : MonoBehaviour
 
         bool isBonusCube = currentBlocksPointValue > 9;
 
-       // Debug.Log($"Checking block at ({indexX}, {indexY}) with point value: {currentBlocksPointValue}");
+        // Debug.Log($"Checking block at ({indexX}, {indexY}) with point value: {currentBlocksPointValue}");
 
 
         // If the current block is a bonus cube, handle it separately
@@ -222,6 +301,36 @@ public class MatrixGrid : MonoBehaviour
         return false;
     }
 
+    #endregion
+
+    #region Game Over Logic
+    private bool CheckTopReached()
+    {
+        for (int x = 0; x < widthColumns; x++)
+        {
+            if (grid[x, heightRows - 1] != null)
+            {
+                // A block is present at the top row
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private void GameOver()
+    {
+        // Add logic to handle game-over state
+        Debug.Log("Game Over!");
+        // You might want to reset the game or show a game-over screen.
+
+        _gameOverScreen.SetActive(true);
+    }
+
+    #endregion
+
+
+
 
 
     /// <summary>
@@ -229,33 +338,6 @@ public class MatrixGrid : MonoBehaviour
     /// </summary>
     /// <param name="gridPosition">Like any array, valid values start at 0 and go up to Height and Width - 1</param>
     /// <returns>A GameObect on which GetComponent can be used, or returns Null if empty.</returns>
-    public static GameObject ReturnObjectAtGridPosition(Vector2 gridPosition)
-    {
-        Vector2 v = RoundVector(gridPosition);
-
-        if (!IsInsideBorder(v))
-            return null;
-
-        if (grid[(int)v.x, (int)v.y] != null)
-
-            return grid[(int)v.x, (int)v.y].parent.gameObject;
-
-        else
-            
-            return null;
-    }
-
-    //round out position
-    public static Vector2 RoundVector(Vector2 v)
-    {
-        return new Vector2(Mathf.Round(v.x), Mathf.Round(v.y));
-    }
-
-    //is object within grid
-    public static bool IsInsideBorder(Vector2 pos)
-    {
-        return (int)pos.x >= 0 && (int)pos.x < widthColumns && (int)pos.y >= 0;
-    }
 
     public static void DeleteMatchedObject(List<Vector2> objectsData)
     {
@@ -280,7 +362,10 @@ public class MatrixGrid : MonoBehaviour
             }
         }
 
-        // After deleting all matched objects, decrease rows
+        // After deleting all matched objects, update the grid
+        UpdateGrid();
+
+        // After updating the grid, decrease rows
         foreach (Vector2 objData in objectsData)
         {
             int x = (int)objData.x;
@@ -292,7 +377,6 @@ public class MatrixGrid : MonoBehaviour
 
                 // Decrease Rows after
                 DecreaseRowsAbove(x, y + 1);
-
             }
             else
             {
@@ -301,6 +385,41 @@ public class MatrixGrid : MonoBehaviour
             }
         }
     }
+
+    private static void UpdateGrid()
+    {
+        // Loop through each column
+        for (int x = 0; x < widthColumns; x++)
+        {
+            // Create a list to store the non-null blocks in the current column
+            List<Transform> nonNullBlocks = new List<Transform>();
+
+            // Loop through each row in the current column
+            for (int y = 0; y < heightRows; y++)
+            {
+                // Check if the current block is null
+                if (grid[x, y] != null)
+                {
+                    nonNullBlocks.Add(grid[x, y]);
+                }
+            }
+
+            // Move non-null blocks to their new positions
+            for (int y = 0; y < nonNullBlocks.Count; y++)
+            {
+                grid[x, y] = nonNullBlocks[y];
+                grid[x, y].position = new Vector3(x, y, 0); // Update the position
+            }
+
+            // Clear the remaining positions in the column
+            for (int y = nonNullBlocks.Count; y < heightRows; y++)
+            {
+                grid[x, y] = null;
+            }
+        }
+    }
+
+
 
 
 
