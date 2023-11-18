@@ -183,14 +183,14 @@ public class MatrixGrid : MonoBehaviour
             {
                 // Handle game over logic here
                 GameOver();
-                yield break; // Exit the coroutine
+                break; // Exit the loop
             }
 
             yield return null; // Wait for the next frame
         }
 
         // Signal back to the spawner
-        spawner.HandleSpawnBlockSignal(this, EventArgs.Empty);
+        spawner.SpawnNextBlock(this, EventArgs.Empty);
     }
 
     private bool CheckForGroupsOf21()
@@ -318,7 +318,7 @@ public class MatrixGrid : MonoBehaviour
         return false;
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         // Add logic to handle game-over state
         Debug.Log("Game Over!");

@@ -2,9 +2,9 @@
 using System.Collections;
 using System;
 
-public enum SpawnerState { Initializing, Ready, Started, Paused, Stopped}
+public enum SpawnerState { Initializing, Ready, Started, Paused, Stopped }
 
-public class SpawnEventArgs : EventArgs{ }
+public class SpawnEventArgs : EventArgs { }
 
 public class BlockSpawner : MonoBehaviour
 {
@@ -35,46 +35,29 @@ public class BlockSpawner : MonoBehaviour
 
     private void OnEnable()
     {
-        SpawnBlockSignal += HandleSpawnBlockSignal;
+        SpawnBlockSignal += SpawnNextBlock;
     }
 
     private void OnDisable()
     {
-        SpawnBlockSignal -= HandleSpawnBlockSignal;
+        SpawnBlockSignal -= SpawnNextBlock;
     }
 
-    public void HandleSpawnBlockSignal(object sender, EventArgs args)
+    public void StartSpawner()
     {
         _state = SpawnerState.Ready;
 
-        // Implement your spawning logic here
         SpawnBlock(0);
     }
 
-    bool IsValidGridPosition()
+    public void PauseSpawner()
     {
-        Vector2 spawnerPosition = transform.position;
-
-        if (!MatrixGrid.IsInsideBorder(spawnerPosition))
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        _state = SpawnerState.Paused;
     }
 
-    bool HasNotReachedTop(int prevY)
+    public void StopSpawner()
     {
-        if (prevY >= transform.position.y - 1)
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        _state = SpawnerState.Stopped;
     }
 
     public void SpawnBlock(int prevY)
@@ -86,7 +69,7 @@ public class BlockSpawner : MonoBehaviour
         else
         {
             // Is the position of the cube in a valid place and is the top reached
-            if (IsValidGridPosition() && HasNotReachedTop(prevY))
+            if (SpawnerPositionValid() && HasNotReachedTop(prevY))
             {
                 _state = SpawnerState.Started;
 
@@ -108,11 +91,15 @@ public class BlockSpawner : MonoBehaviour
                 MatrixGrid.currentBlock = blockObj;
 
                 // Comment this line to allow the spawner to stay paused after spawning
-               _state = SpawnerState.Paused;
+                _state = SpawnerState.Paused;
             }
             else
             {
+
+                Debug.Log("Invalid Pos");
+
                 // Check if any point total is reached in the grid
+                /*
                 bool anyPointTotalReached = MatrixGrid.CheckAllDirectionTargetReach((int)MatrixGrid.currentBlock.transform.position.x, (int)MatrixGrid.currentBlock.transform.position.y);
 
                 if (anyPointTotalReached)
@@ -124,11 +111,39 @@ public class BlockSpawner : MonoBehaviour
                 {
                     // Set spawner state to ready
                     _state = SpawnerState.Ready;
-                }
+                }*/
+
+                _state = SpawnerState.Stopped;
+
+                MatrixGrid.Instance.GameOver();
             }
         }
     }
 
+    public void SpawnNextBlock(object sender, EventArgs args)
+    {
+        StartSpawner();
+    }
+
+    bool SpawnerPositionValid()
+    {
+        int x = (int)transform.position.x;
+        int y = (int)transform.position.y;
+
+        return MatrixGrid.grid[x, y] == null;
+    }
+
+    bool HasNotReachedTop(int prevY)
+    {
+        if (prevY >= transform.position.y - 1)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
 
 
 
