@@ -2975,6 +2975,8 @@ MonoBehaviour:
           m_StringArgument: 2,2,false
           m_BoolArgument: 0
         m_CallState: 2
+  _pulseOrigin: {x: 0, y: 0}
+  pulseRange: 2
 --- !u!4 &1190014750
 Transform:
   m_ObjectHideFlags: 0
@@ -3783,7 +3785,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1538848210
 MonoBehaviour:
@@ -5216,7 +5218,7 @@ PrefabInstance:
     - target: {fileID: 2800370367549842863, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2800370367549842863, guid: dcd03adf372ff3c4bba6bb1c2927ba33,
         type: 3}
@@ -5320,7 +5322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 166b0fe97b81d35418bb950bc0a13903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  superCubePercentage: {fileID: 11400000, guid: 12f93cd9e9b4a964da43a43a2a0fe879,
+    type: 2}
   lastValue: -1
   consecutiveCount: 0
   maxConsecutive: 2
-  superPowerPercentage: 1

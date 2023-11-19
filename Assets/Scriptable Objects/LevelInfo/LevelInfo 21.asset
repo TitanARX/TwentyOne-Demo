@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelColor: {r: 0, g: 0.69803923, b: 0.5803922, a: 1}
   linesToClear: 147
-  levelSpeed: 0.2
-  bombProbPercentage: 3
+  levelSpeed: 0.1
+  bombProbPercentage: 1

@@ -2,6 +2,7 @@
 using UnityEngine.Events;
 using System;
 using UnityEngine.InputSystem;
+using DG.Tweening;
 
 public class BlockSettleArgs : EventArgs
 {
@@ -28,6 +29,10 @@ public class BlockObject : MonoBehaviour
     //Generates Point Value
     private GenerateRandomValue _pointGenerator => FindObjectOfType<GenerateRandomValue>();
 
+    public GameManager _manager => FindObjectOfType<GameManager>();
+
+    public MeshRenderer _renderer => GetComponentInChildren<MeshRenderer>();
+
     //Controls for Cube
     private UniversalControls _inputActions;
 
@@ -38,6 +43,10 @@ public class BlockObject : MonoBehaviour
     private float originalFallSpeed;
 
     private bool _isQuickDropping = false;
+
+
+    private float delayTimer = 0f;
+    private bool hasDelayPassed = false;
 
     [Header("Current Block State")]
     public BlockState state = BlockState.Dropping;
@@ -80,6 +89,8 @@ public class BlockObject : MonoBehaviour
         _inputActions.Player.QuickHold.Enable();
         _inputActions.Player.QuickHold.started += StartHold;
         _inputActions.Player.QuickHold.canceled += StopHold;
+
+
     }
 
 
@@ -125,6 +136,17 @@ public class BlockObject : MonoBehaviour
     {
         // Disable Movement When Block's Position Settles
         if (state == BlockState.Settled)
+            return;
+
+        delayTimer += Time.deltaTime;
+
+        if (!hasDelayPassed && delayTimer >= 0.5f)
+        {
+            hasDelayPassed = true;
+            lastFall = Time.time;
+        }
+
+        if (!hasDelayPassed)
             return;
 
         if (_isHolding && _canHold)
@@ -268,12 +290,18 @@ public class BlockObject : MonoBehaviour
             // Update the available grid positions based on the new position of the BlockObject.
             UpdateAvailableGridPositions();
 
+
+            _manager._pulseOrigin = transform.position;
+
+
             // Set the state of the BlockObject to Settled, indicating that it has reached its final position.
             state = BlockState.Settled;
 
             // Invoke the OnSettle event, notifying any listeners that the block has settled.
             // Pass the BlockSettleArgs with the block's point value and final position.
             OnSettle?.Invoke(this, new BlockSettleArgs(PointValue, transform.position, this));
+
+
 
         }
 
@@ -333,4 +361,14 @@ public class BlockObject : MonoBehaviour
             MatrixGrid.grid[(int)roundedPosition.x, (int)roundedPosition.y] = child;
         }
     }
+
+  
+       
+
+
+       
+
+
+
+    
 }

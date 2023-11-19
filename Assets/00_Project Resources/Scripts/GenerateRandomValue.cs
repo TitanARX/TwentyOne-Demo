@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GenerateRandomValue : MonoBehaviour
 {
+    // Adjust this percentage as needed
+    public IntVariable superCubePercentage;
+
     [SerializeField]
     private int lastValue = -1;
     [SerializeField]
@@ -11,7 +14,8 @@ public class GenerateRandomValue : MonoBehaviour
     [SerializeField]
     private int maxConsecutive = 1; // Adjust this value as needed
     [SerializeField]
-    private int superPowerPercentage = 20; // Adjust this percentage as needed
+    private int superPowerPercentage => superCubePercentage.Value;
+    
 
     public int GenerateCubeValue()
     {

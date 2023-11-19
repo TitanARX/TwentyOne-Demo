@@ -142,10 +142,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f49f9ecd7c1f94a9842ea1605d70e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyerWildcardChance: 19
-  RanGenRange: {x: 1, y: 9}
-  Point: 0
-  isDestroyerWildcard: 0
+  QuickDrop:
+    m_Name: Quick Drop
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 366838c1-3851-4adf-9b78-8b7cfecb3c72
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+  state: 0
+  _pointValue: 0
+  _isSuperBlock: 0
+  FallSpeed: {fileID: 11400000, guid: 37df3926741da514f8fae397a5506c1b, type: 2}
   L_MovementEvent:
     m_PersistentCalls:
       m_Calls:
@@ -191,8 +199,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  FallSpeed: {fileID: 11400000, guid: 37df3926741da514f8fae397a5506c1b, type: 2}
-  WildcardChance: {fileID: 11400000, guid: 12f93cd9e9b4a964da43a43a2a0fe879, type: 2}
 --- !u!114 &5390941596997675912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c4865ce05784a64a9220175e63679fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlockObjectPointValue: 0
   rend: {fileID: 1355539071929855096}
   TextureBank:
   - {fileID: 2100000, guid: cc8c8ad3df813154ca268c146264cbcf, type: 2}
@@ -219,7 +226,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: d27b2f7fe01746d47b142278311195bc, type: 2}
   - {fileID: 2100000, guid: 294a09607b04bf1479a57fe790997251, type: 2}
   - {fileID: 2100000, guid: a112573eec5fd5f4cb7dffcca73e9252, type: 2}
-  isWildcard: 0
 --- !u!82 &4934971507385814482
 AudioSource:
   m_ObjectHideFlags: 0

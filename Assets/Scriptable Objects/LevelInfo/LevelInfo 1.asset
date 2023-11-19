@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: LevelInfo 1
   m_EditorClassIdentifier: 
   levelColor: {r: 1, g: 1, b: 1, a: 1}
-  linesToClear: 1
+  linesToClear: 7
   levelSpeed: 1
   bombProbPercentage: 0
