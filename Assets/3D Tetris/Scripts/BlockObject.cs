@@ -48,6 +48,11 @@ public class BlockObject : MonoBehaviour
     private float delayTimer = 0f;
     private bool hasDelayPassed = false;
 
+    [Header("Ghost Cube")]
+    public bool isGhostCubeDestroyed = false;
+    public GameObject ghostCubePrefab;
+    private GameObject ghostCubeInstance;
+
     [Header("Current Block State")]
     public BlockState state = BlockState.Dropping;
 
@@ -75,6 +80,8 @@ public class BlockObject : MonoBehaviour
 
     private void Awake()
     {
+
+
         // Subscribe Controls
         _inputActions = new UniversalControls();
         _inputActions.Player.Movement.Enable();
@@ -96,6 +103,8 @@ public class BlockObject : MonoBehaviour
 
     private void OnEnable()
     {
+
+
         //Set Point Value
         PointValue = _pointGenerator.GenerateCubeValue();
         
@@ -130,6 +139,10 @@ public class BlockObject : MonoBehaviour
         _inputActions.Player.Movement.performed -= ProcessPlayerInput;
         _inputActions.Player.QuickHold.started -= StartHold;
         _inputActions.Player.QuickHold.canceled -= StopHold;
+
+
+        if (ghostCubeInstance != null)
+            Destroy(ghostCubeInstance);
     }
 
     private void Update()
@@ -185,7 +198,50 @@ public class BlockObject : MonoBehaviour
                     lastFall = Time.time;
                 }
             }
-        }        
+        }
+
+        if (!ghostCubeInstance)
+            return;
+
+        if (state == BlockState.Dropping)
+        {
+            // Find the position for the ghost cube
+            Vector3 ghostPosition = FindGhostPosition();
+
+            // Check if ghostCubeInstance is null and instantiate it if needed
+            // Update the position of the ghost cube
+            ghostCubeInstance.transform.position = ghostPosition;
+
+            // Show the ghost cube
+            ghostCubeInstance.SetActive(true);
+
+            // Check the distance between the ghost cube and the current cube
+            float distance = Vector3.Distance(ghostCubeInstance.transform.position, transform.position);
+
+            // If the distance is less than 1 meter, destroy the ghost cube
+            if (distance < 2f)
+            {
+                DestroyGhostCube();
+            }
+        }
+        else
+        {
+            // Hide the ghost cube when the block has settled
+            ghostCubeInstance.SetActive(false);
+
+            DestroyGhostCube();
+        }
+    }
+
+    private void DestroyGhostCube()
+    {
+        // Destroy the ghost cube instance
+        if (ghostCubeInstance != null)
+        {
+            Destroy(ghostCubeInstance);
+            ghostCubeInstance = null;
+            isGhostCubeDestroyed = true;
+        }
     }
 
 
@@ -306,7 +362,49 @@ public class BlockObject : MonoBehaviour
         }
 
         lastFall = Time.time;
+
+
+        if (ghostCubeInstance == null)
+        {
+            if (isGhostCubeDestroyed)
+                return;
+
+            Vector3 ghostPosition = FindGhostPosition();
+
+            ghostCubeInstance = Instantiate(ghostCubePrefab, ghostPosition, Quaternion.identity);
+        }
+
+
     }
+
+    private Vector3 FindGhostPosition()
+    {
+        Vector3 currentPosition = transform.position;
+        Vector3 ghostPosition = new Vector3(currentPosition.x, 0, 0); // Default to one unit below
+
+        RaycastHit hit;
+
+        if (Physics.Raycast(currentPosition, Vector3.down, out hit))
+        {
+            Debug.Log(hit.transform.name);
+
+            // Check if there's a block below the current position
+            if (hit.transform.CompareTag("Block"))
+            {
+                Debug.Log("hit Cube");
+
+                ghostPosition = new Vector3(currentPosition.x, hit.point.y + 0.5f, 0); // Position above the hit point
+            }
+            else
+            {
+                ghostPosition = new Vector3(currentPosition.x, 0, 0);
+            }
+         
+        }
+
+        return ghostPosition;
+    }
+
 
     private bool IsGridPositionEmpty()
     {
