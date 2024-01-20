@@ -80,8 +80,6 @@ public class BlockObject : MonoBehaviour
 
     private void Awake()
     {
-
-
         // Subscribe Controls
         _inputActions = new UniversalControls();
         _inputActions.Player.Movement.Enable();
@@ -96,17 +94,13 @@ public class BlockObject : MonoBehaviour
         _inputActions.Player.QuickHold.Enable();
         _inputActions.Player.QuickHold.started += StartHold;
         _inputActions.Player.QuickHold.canceled += StopHold;
-
-
     }
 
 
     private void OnEnable()
     {
-
-
         //Set Point Value
-        PointValue = _pointGenerator.GenerateCubeValue();
+        PointValue = _pointGenerator.GetNextCubeValue();
         
         //Set State to Dropping on Inital Birth
         state = BlockState.Dropping;
@@ -118,9 +112,6 @@ public class BlockObject : MonoBehaviour
         MatrixGrid.isSuperBlock = IsSuperBlock;
 
         originalFallSpeed = FallSpeed.value;
-
-        //Debug.Log("Initial Fall Speed: " + originalFallSpeed);
-
     }
 
     private void OnDisable()
@@ -178,9 +169,6 @@ public class BlockObject : MonoBehaviour
         {
             if (_isQuickDropping)
             {
-                // Adjust the movement during quick drop
-                // For example, decrease the time interval between falls
-
                 var quickDropSpeed = !_canHold ? FallSpeed.value : 0.1f; 
 
                 if (Time.time - lastFall >= quickDropSpeed)
@@ -278,7 +266,6 @@ public class BlockObject : MonoBehaviour
         {
             _isHolding = false;
 
-            Debug.Log("Stop Holding");
             // TODO: Implement any visual feedback for releasing hold (if needed)
         }
     }

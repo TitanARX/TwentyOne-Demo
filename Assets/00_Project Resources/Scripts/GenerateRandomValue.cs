@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GenerateRandomValue : MonoBehaviour
@@ -8,49 +9,56 @@ public class GenerateRandomValue : MonoBehaviour
     public IntVariable superCubePercentage;
 
     [SerializeField]
-    private int lastValue = -1;
-    [SerializeField]
-    private int consecutiveCount = 0;
+    private List<int> valueList = new List<int>();
     [SerializeField]
     private int maxConsecutive = 1; // Adjust this value as needed
-    [SerializeField]
+    private int consecutiveCount = 0;
     private int superPowerPercentage => superCubePercentage.Value;
-    
 
-    public int GenerateCubeValue()
+    public List<TextMeshProUGUI> UpcomingNumberUI = new List<TextMeshProUGUI>();
+
+
+    private void Start()
     {
-        int newValue;
-
-        // Check if consecutive count is greater than the allowed limit
-        if (consecutiveCount >= maxConsecutive)
+        // Initialize the list with 10 random values
+        for (int i = 0; i < 10; i++)
         {
-            // Generate a new value that is different from the last one
-            do
-            {
-                newValue = GenerateValue();
-            } while (newValue == lastValue);
+            valueList.Add(GenerateValue());
+        }
 
-            consecutiveCount = 0;
+        UpcomingNumberUI[0].text = string.Empty;
+        UpcomingNumberUI[1].text = string.Empty;
+        UpcomingNumberUI[2].text = string.Empty;
+    }
+
+        public int GetNextCubeValue()
+    {
+        // Get the first value from the list
+        int nextValue = valueList[0];
+
+        // Remove the first value from the list
+        valueList.RemoveAt(0);
+
+        // Add a new value to the end of the list
+        valueList.Add(GenerateValue());
+
+        if(valueList.Count > 0)
+        {
+            Debug.Log("Ready Value Count");
+
+            UpcomingNumberUI[0].text = valueList[0].ToString();
+            UpcomingNumberUI[1].text = valueList[1].ToString();
+            UpcomingNumberUI[2].text = valueList[2].ToString();
+
         }
         else
         {
-            // Generate a new value
-            newValue = GenerateValue();
+            Debug.Log("Not Ready Value Count");
 
-            // Check if the new value is the same as the last one
-            if (newValue == lastValue)
-            {
-                consecutiveCount++;
-            }
-            else
-            {
-                consecutiveCount = 0;
-            }
         }
 
-        lastValue = newValue;
 
-        return newValue;
+        return nextValue;
     }
 
     public bool IsSuperPowerValue(int value)

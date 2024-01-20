@@ -31,6 +31,7 @@ public class Scoremanager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _timeHeader = null;
     
+
     public bool _timerActive;
 
     public void Update()
@@ -96,9 +97,9 @@ public class Scoremanager : MonoBehaviour
 
     public void SetTargetValue(int target)
     {
-        _targetVar.Value += target;
+        //_targetVar.Value += target;
 
-        _targetScoreHeader.text = _targetVar.Value.ToString();
+        _targetScoreHeader.text = target.ToString();
     }
 
     public void ResetValues(int resetZero)

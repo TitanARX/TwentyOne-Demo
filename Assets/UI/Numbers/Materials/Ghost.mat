@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: 1
+  m_Name: Ghost
   m_Shader: {fileID: 4800000, guid: f10ac0b05347ab14bab376ef55d18c03, type: 3}
   m_ShaderKeywords: _SHADERSPACE_UV _TIMESETTINGS_LINEAR_DEFAULT
   m_LightmapFlags: 4
@@ -49,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7f38c1c7b6a861844be0a19e6979d546, type: 3}
+        m_Texture: {fileID: 10904, guid: 0000000000000000f000000000000000, type: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -91,12 +91,12 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _HologramContrast: 1
-    - _HologramDistortionDensity: 0.5
-    - _HologramDistortionOffset: 0.5
+    - _HologramDistortionDensity: -3.76
+    - _HologramDistortionOffset: 7.6
     - _HologramDistortionScale: 10
-    - _HologramDistortionSpeed: 2
+    - _HologramDistortionSpeed: 0.34
     - _HologramFade: 1
-    - _HologramLineFrequency: 500
+    - _HologramLineFrequency: 0
     - _HologramLineGap: 3
     - _HologramLineSpeed: 0.01
     - _HologramMinAlpha: 0.2

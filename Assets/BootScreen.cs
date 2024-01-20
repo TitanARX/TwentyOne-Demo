@@ -42,7 +42,7 @@ public class BootScreen : MonoBehaviour
             yield return FlashUnderscoreCoroutine(0.75f, newBootText);
 
 
-            if (currentMessageIndex == bootMessages.Count - 2)
+            if (currentMessageIndex == bootMessages.Count - 1)
             {
 
                 aSource.PlayOneShot(_biosBeep);
@@ -53,7 +53,7 @@ public class BootScreen : MonoBehaviour
             newBootText.text = bootMessages[currentMessageIndex];
 
             // Wait for 2 seconds before moving to the next message
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
 
 
             // Move to the next message

@@ -544,7 +544,7 @@ MonoBehaviour:
   bootTextPrefab: {fileID: 1493416166448266867, guid: b9c6c401ea4409b44a1733b9a874b59e,
     type: 3}
   bootTextContainer: {fileID: 1412998767}
-  underscoreFlashTime: 0.5
+  underscoreFlashTime: 0.1
   bootMessages:
   - Checking ROM...
   - Initializing Hardware...
